@@ -5,12 +5,16 @@ class Historic:
 	def __init__(self):
 		self._open_date = datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')
 		self.extract = []
-	
+
+	@property
+	def openDate(self):
+		return self._open_date
+
 	def add_extract(self, str):
 		self.extract.append(str)
 
 	def display_extract(self):
-		print('Data abertura: {}'.format(self._open_date))
-		print('Transações: ')
+		text = ''
 		for t in self.extract:
-			print('-', t)
+			text += t
+		return text

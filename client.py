@@ -18,6 +18,3 @@ class Client:
 	@property
 	def cpf(self):
 		return self._cpf
-	
-	def display_client(self):
-		print('Nome: {}\nCPF: {}'.format(self._name + ' ' + self._surname, self._cpf))
