@@ -118,7 +118,7 @@ class ScreenInitial(object):
 "}")
         self.pushButtonLogin.setObjectName("pushButtonLogin")
         self.pushButtonCreateAccount = QtWidgets.QPushButton(self.frame_2)
-        self.pushButtonCreateAccount.setGeometry(QtCore.QRect(345, 370, 110, 30))
+        self.pushButtonCreateAccount.setGeometry(QtCore.QRect(340, 400, 110, 30))
         font = QtGui.QFont()
         font.setFamily("Fira Code")
         font.setPointSize(10)
@@ -140,6 +140,30 @@ class ScreenInitial(object):
 "    color: rgb(255, 255, 255);\n"
 "}")
         self.pushButtonCreateAccount.setObjectName("pushButtonCreateAccount")
+        self.pushButtonExit = QtWidgets.QPushButton(self.frame_2)
+        self.pushButtonExit.setGeometry(QtCore.QRect(350, 350, 100, 36))
+        font = QtGui.QFont()
+        font.setFamily("Fira Code")
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButtonExit.setFont(font)
+        self.pushButtonExit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButtonExit.setStyleSheet("QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    background-color: rgb(0, 55, 104);\n"
+"    border: 0;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color:rgb(134, 127, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);\n"
+"}")
+        self.pushButtonExit.setObjectName("pushButtonExit")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -156,6 +180,7 @@ class ScreenInitial(object):
         self.lineEditLoginPassword.setPlaceholderText(_translate("MainWindow", "Senha"))
         self.pushButtonLogin.setText(_translate("MainWindow", "Login"))
         self.pushButtonCreateAccount.setText(_translate("MainWindow", "Criar Conta"))
+        self.pushButtonExit.setText(_translate("MainWindow", "Sair"))
 
 
 if __name__ == "__main__":

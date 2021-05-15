@@ -14,12 +14,19 @@ from screenMyDice import ScreenMyDice
 from screenRegister import ScreenRegister
 from screenTransfer import ScreenTransfer
 from screenWithdraw import ScreenWithdraw
+from screenChat import ScreenChat
 from account import Account
 from client import Client
 from historic import Historic
 from bank import Bank
 import datetime
+import socket
 
+ip = "localhost"
+port = 8000
+addr = ((ip,port))
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(addr)
 
 class ScreenMain(QtWidgets.QWidget):
 	def setupUI(self, Main):
@@ -37,6 +44,7 @@ class ScreenMain(QtWidgets.QWidget):
 		self.stack6 = QtWidgets.QMainWindow()
 		self.stack7 = QtWidgets.QMainWindow()
 		self.stack8 = QtWidgets.QMainWindow()
+		self.stack9 = QtWidgets.QMainWindow()
 
 		self.screenInitial = ScreenInitial()
 		self.screenInitial.setupUi(self.stack0)
@@ -65,6 +73,9 @@ class ScreenMain(QtWidgets.QWidget):
 		self.screenExtract = ScreenExtract()
 		self.screenExtract.setupUi(self.stack8)
 
+		self.screenChat = ScreenChat()
+		self.screenChat.setupUi(self.stack9)
+
 		self.QtStack.addWidget(self.stack0)
 		self.QtStack.addWidget(self.stack1)
 		self.QtStack.addWidget(self.stack2)
@@ -74,6 +85,7 @@ class ScreenMain(QtWidgets.QWidget):
 		self.QtStack.addWidget(self.stack6)
 		self.QtStack.addWidget(self.stack7)
 		self.QtStack.addWidget(self.stack8)
+		self.QtStack.addWidget(self.stack9)
 
 
 class Main(QMainWindow, ScreenMain):
@@ -85,6 +97,7 @@ class Main(QMainWindow, ScreenMain):
 		# Tela Inicial
 		self.screenInitial.pushButtonLogin.clicked.connect(self.buttonLogin)
 		self.screenInitial.pushButtonCreateAccount.clicked.connect(self.openScreenRegister)
+		self.screenInitial.pushButtonExit.clicked.connect(self.exitApp)
 
 		# Tela Registro
 		self.screenRegister.pushButtonRegister.clicked.connect(self.buttonRegister)
@@ -98,6 +111,7 @@ class Main(QMainWindow, ScreenMain):
 		self.screenMenu.pushButtonMyDice.clicked.connect(self.menuMyDice)
 		self.screenMenu.pushButtonExtract.clicked.connect(self.menuExtract)
 		self.screenMenu.pushButtonExit.clicked.connect(self.comeBackLogin)
+		self.screenMenu.pushButtonChat.clicked.connect(self.menuChat)
 
 		# Tela saque
 		self.screenWithdraw.pushButtonWithdrawWithdraw.clicked.connect(self.withdraw)
@@ -120,6 +134,10 @@ class Main(QMainWindow, ScreenMain):
 		# Tela Extrato
 		self.screenExtract.pushButtonComeBack.clicked.connect(self.comeBack)
 
+		# Tela Chat
+		self.screenChat.pushButtonChatSubmit.clicked.connect(self.buttonChatSubmit)
+		self.screenChat.pushButtonComeBack.clicked.connect(self.comeBack)
+
 	#   Tela Inicial
 	def buttonLogin(self):
 		cpf = self.screenInitial.lineEditLoginCPF.text()
@@ -137,7 +155,19 @@ class Main(QMainWindow, ScreenMain):
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
 	def openScreenRegister(self):
+		#Não mostrar nenhum campo preenchidos
+		self.screenRegister.lineEditRegisterName.setText('')
+		self.screenRegister.lineEditRegisterSurname.setText('')
+		self.screenRegister.lineEditRegisterCPF.setText('')
+		self.screenRegister.lineEditRegisterAccountNumber.setText('')
+		self.screenRegister.lineEditRegisterAccountBalance.setText('')
+		self.screenRegister.lineEditRegisterAccountPassword.setText('')
 		self.QtStack.setCurrentIndex(1)
+
+	def exitApp(self):
+		client_socket.close()
+		QMessageBox.information(None, 'Evollutte Bank', 'Programa Finalizado')
+		sys.exit(app.exec_())
 
 	# Tela de Registro
 	def buttonRegister(self):
@@ -173,13 +203,21 @@ class Main(QMainWindow, ScreenMain):
 
 	# Tela Menu
 	def menuWithdraw(self):
+		self.screenWithdraw.lineEditWithdrawValue.setText('')
 		self.QtStack.setCurrentIndex(3)
 
 	def menuDeposit(self):
+		self.screenDeposit.lineEditDepositValue.setText('')
 		self.QtStack.setCurrentIndex(4)
 
 	def menuTransfer(self):
+		self.screenTransfer.lineEditTransferAccountNumber.setText('')
+		self.screenTransfer.lineEditTransferValue.setText('')
 		self.QtStack.setCurrentIndex(5)
+
+	def menuChat(self):
+		self.screenChat.lineEditChat.setText('')
+		self.QtStack.setCurrentIndex(9)
 
 	def menuBalance(self):
 		account = self.bank.get_account_2()
@@ -240,8 +278,22 @@ class Main(QMainWindow, ScreenMain):
 			self.screenTransfer.lineEditTransferAccountNumber.setText('')
 			QMessageBox.information(None, 'Evollutte Bank', 'Número de conta não encontrado!')
 
+	# Tela Chat
+	def buttonChatSubmit(self):
+		mensagem = self.screenChat.lineEditChat.text()
+		if not(mensagem == ""):
+			client_socket.send(mensagem.encode())
+			self.screenChat.plainTextEditChat.insertPlainText('Cliente: {}\n'.format(mensagem))
+			self.screenChat.plainTextEditChat.insertPlainText('Servidor: {}\n'.format(client_socket.recv(1024).decode()))
+			self.screenChat.lineEditChat.setText('')
+		else:
+			QMessageBox.information(None, 'Evollutte Bank', 'Nenhuma pergunta foi enviada')
+
 	# Padrão
 	def comeBackLogin(self):
+		self.screenChat.plainTextEditChat.setPlainText('')
+		self.screenInitial.lineEditLoginCPF.setText('')
+		self.screenInitial.lineEditLoginPassword.setText('')
 		self.QtStack.setCurrentIndex(0)
 
 	def comeBack(self):
