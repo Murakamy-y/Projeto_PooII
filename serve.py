@@ -11,12 +11,16 @@ con, client = serv_socket.accept()
 print("Conectando")
 print("Aguardando mensagem")
 
-while (True):
+enviar = None
+
+while enviar != '':
 	recebe = con.recv(1024)
-	print("Cliente: " + recebe.decode())
-	enviar = input("Enviar Mensagem:")
-	con.send(enviar.encode())
-	if (enviar == '' and recebe.decode() == ''):
+	if (recebe.decode() != ''):
+		print("Cliente: " + recebe.decode())
+		enviar = input("Enviar Mensagem:")
+		con.send(enviar.encode())
+	else:
 		print('fim...')
 		serv_socket.close()
+		break
 
