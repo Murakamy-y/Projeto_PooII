@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'screenInitial.ui'
+# Form implementation generated from reading ui file 'attscreenInitial.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -20,7 +20,7 @@ class ScreenInitial(object):
         MainWindow.setMaximumSize(QtCore.QSize(800, 600))
         MainWindow.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("banco.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("telas/banco.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -94,7 +94,7 @@ class ScreenInitial(object):
         self.lineEditLoginPassword.setClearButtonEnabled(False)
         self.lineEditLoginPassword.setObjectName("lineEditLoginPassword")
         self.pushButtonLogin = QtWidgets.QPushButton(self.frame_2)
-        self.pushButtonLogin.setGeometry(QtCore.QRect(350, 295, 100, 36))
+        self.pushButtonLogin.setGeometry(QtCore.QRect(310, 275, 80, 36))
         font = QtGui.QFont()
         font.setFamily("Fira Code")
         font.setPointSize(14)
@@ -141,7 +141,7 @@ class ScreenInitial(object):
 "}")
         self.pushButtonCreateAccount.setObjectName("pushButtonCreateAccount")
         self.pushButtonExit = QtWidgets.QPushButton(self.frame_2)
-        self.pushButtonExit.setGeometry(QtCore.QRect(350, 350, 100, 36))
+        self.pushButtonExit.setGeometry(QtCore.QRect(410, 275, 80, 36))
         font = QtGui.QFont()
         font.setFamily("Fira Code")
         font.setPointSize(14)

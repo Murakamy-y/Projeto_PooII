@@ -34,11 +34,8 @@ class Main(ScreenTelas):
 		self.screenMenu.pushButtonWithdraw.clicked.connect(self.menuWithdraw)
 		self.screenMenu.pushButtonDeposit.clicked.connect(self.menuDeposit)
 		self.screenMenu.pushButtonTransfer.clicked.connect(self.menuTransfer)
-		self.screenMenu.pushButtonBalance.clicked.connect(self.menuBalance)
-		self.screenMenu.pushButtonMyDice.clicked.connect(self.menuMyDice)
 		self.screenMenu.pushButtonExtract.clicked.connect(self.menuExtract)
 		self.screenMenu.pushButtonExit.clicked.connect(self.comeBackLogin)
-		self.screenMenu.pushButtonChat.clicked.connect(self.menuChat)
 
 		# Tela saque
 		self.screenWithdraw.pushButtonWithdrawWithdraw.clicked.connect(self.withdraw)
@@ -52,18 +49,9 @@ class Main(ScreenTelas):
 		self.screenTransfer.pushButtonTransferTransfer.clicked.connect(self.transfer)
 		self.screenTransfer.pushButtonComeBack.clicked.connect(self.comeBack)
 
-		# Tela saldo
-		self.screenBalance.pushButtonComeBack.clicked.connect(self.comeBack)
-
-		# Tela Meus Dados
-		self.screenMyDice.pushButtonComeBack.clicked.connect(self.comeBack)
-
 		# Tela Extrato
 		self.screenExtract.pushButtonComeBack.clicked.connect(self.comeBack)
 
-		# Tela Chat
-		self.screenChat.pushButtonChatSubmit.clicked.connect(self.buttonChatSubmit)
-		self.screenChat.pushButtonComeBack.clicked.connect(self.comeBack)
 
 	#   Tela Inicial
 	def buttonLogin(self):
@@ -77,6 +65,8 @@ class Main(ScreenTelas):
 				QMessageBox.information(None, 'Evollutte Bank', 'Login realizado com sucesso!')
 				self.screenInitial.lineEditLoginCPF.setText('')
 				self.screenInitial.lineEditLoginPassword.setText('')
+				self.screenMenu.lineEditMenuBalance.setText('saldo')
+				self.screenMenu.lineEditMenuName.setText('nome')
 				self.QtStack.setCurrentIndex(2)
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
@@ -134,35 +124,12 @@ class Main(ScreenTelas):
 		self.screenTransfer.lineEditTransferValue.setText('')
 		self.QtStack.setCurrentIndex(5)
 
-	def menuChat(self):
-		self.screenChat.lineEditChat.setText('')
-		self.QtStack.setCurrentIndex(9)
-
-	def menuBalance(self):
-		push = '{}'.format('balance')
-		pull = self.clientHost.submit(push)
-		self.screenBalance.lineEditBalanceValue.setText(pull)
-		self.QtStack.setCurrentIndex(6)
-
-	def menuMyDice(self):
-		push = '{}'.format('myDice')
-		pull = self.clientHost.submit(push)
-		message = pull.split('*')
-		self.screenMyDice.lineEditMyDiceName.setText(message[0])
-		self.screenMyDice.lineEditMyDiceSurname.setText(message[1])
-		self.screenMyDice.lineEditMyDiceCPF.setText(message[2])
-		self.screenMyDice.lineEditMyDiceAccountNumber.setText(message[3])
-		self.screenMyDice.lineEditMyDiceAccountHolder.setText(message[4])
-		self.screenMyDice.lineEditMyDiceAccountBalance.setText(message[5])
-		self.screenMyDice.lineEditMyDiceAccountLimit.setText(message[6])
-		self.QtStack.setCurrentIndex(7)
-
 	def menuExtract(self):
 		push = "{}".format('extract')
 		pull = self.clientHost.submit(push)
 		
 		self.self.screenExtract.plainTextEdit.setPlainText(pull)
-		self.QtStack.setCurrentIndex(8)
+		self.QtStack.setCurrentIndex(6)
 
 	# Tela Saque
 	def withdraw(self):
@@ -208,20 +175,8 @@ class Main(ScreenTelas):
 		#	self.screenTransfer.lineEditTransferAccountNumber.setText('')
 		QMessageBox.information(None, 'Evollutte Bank', 'Número de conta não encontrado!')
 
-	# Tela Chat
-	def buttonChatSubmit(self):
-		mensagem = self.screenChat.lineEditChat.text()
-		if not(mensagem == ""):
-			#client_socket.send(mensagem.encode())
-			self.screenChat.plainTextEditChat.insertPlainText('Cliente: {}\n'.format(mensagem))
-			self.screenChat.plainTextEditChat.insertPlainText('Servidor: {}\n'.format(client_socket.recv(1024).decode()))
-			self.screenChat.lineEditChat.setText('')
-		else:
-			QMessageBox.information(None, 'Evollutte Bank', 'Nenhuma pergunta foi enviada')
-
 	# Padrão
 	def comeBackLogin(self):
-		self.screenChat.plainTextEditChat.setPlainText('')
 		self.screenInitial.lineEditLoginCPF.setText('')
 		self.screenInitial.lineEditLoginPassword.setText('')
 		self.QtStack.setCurrentIndex(0)

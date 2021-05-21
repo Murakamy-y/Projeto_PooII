@@ -6,12 +6,9 @@ from screenDeposit import ScreenDeposit
 from screenExtract import ScreenExtract
 from screenInitial import ScreenInitial
 from screenMenu import ScreenMenu
-from screenMyDice import ScreenMyDice
 from screenRegister import ScreenRegister
 from screenTransfer import ScreenTransfer
 from screenWithdraw import ScreenWithdraw
-from screenChat import ScreenChat
-
 
 class ScreenTelas(QtWidgets.QWidget):
 	def setupUI(self, Main):
@@ -49,17 +46,8 @@ class ScreenTelas(QtWidgets.QWidget):
 		self.screenTransfer = ScreenTransfer()
 		self.screenTransfer.setupUi(self.stack5)
 
-		self.screenBalance = ScreenBalance()
-		self.screenBalance.setupUi(self.stack6)
-
-		self.screenMyDice = ScreenMyDice()
-		self.screenMyDice.setupUi(self.stack7)
-
 		self.screenExtract = ScreenExtract()
-		self.screenExtract.setupUi(self.stack8)
-
-		self.screenChat = ScreenChat()
-		self.screenChat.setupUi(self.stack9)
+		self.screenExtract.setupUi(self.stack6)
 
 		self.QtStack.addWidget(self.stack0)
 		self.QtStack.addWidget(self.stack1)
@@ -68,6 +56,4 @@ class ScreenTelas(QtWidgets.QWidget):
 		self.QtStack.addWidget(self.stack4)
 		self.QtStack.addWidget(self.stack5)
 		self.QtStack.addWidget(self.stack6)
-		self.QtStack.addWidget(self.stack7)
-		self.QtStack.addWidget(self.stack8)
-		self.QtStack.addWidget(self.stack9)
+
