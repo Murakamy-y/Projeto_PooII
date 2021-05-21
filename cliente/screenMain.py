@@ -52,14 +52,13 @@ class Main(ScreenTelas):
 		# Tela Extrato
 		self.screenExtract.pushButtonComeBack.clicked.connect(self.comeBack)
 
-
 	#   Tela Inicial
 	def buttonLogin(self):
 		cpf = self.screenInitial.lineEditLoginCPF.text()
 		password = self.screenInitial.lineEditLoginPassword.text()
 		if not (cpf == '' or password == ''):
-			push = '{}*{}*{}'.format('authenticated', cpf, password)#enviar
-			pull = self.clientHost.submit(push)#receber
+			push = '{}*{}*{}'.format('authenticated', cpf, password)  # enviar
+			pull = self.clientHost.submit(push)  # receber
 			if pull == 'True':
 				self.cpf = cpf
 				QMessageBox.information(None, 'Evollutte Bank', 'Login realizado com sucesso!')
@@ -67,6 +66,7 @@ class Main(ScreenTelas):
 				self.screenInitial.lineEditLoginPassword.setText('')
 				self.screenMenu.lineEditMenuBalance.setText('saldo')
 				self.screenMenu.lineEditMenuName.setText('nome')
+				self.menu()
 				self.QtStack.setCurrentIndex(2)
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
@@ -107,10 +107,24 @@ class Main(ScreenTelas):
 				self.screenRegister.lineEditRegisterAccountBalance.setText('')
 				self.screenRegister.lineEditRegisterAccountPassword.setText('')
 				self.QtStack.setCurrentIndex(0)
+
+			elif pull == 'False1':
+				QMessageBox.information(None, 'Evollutte Bank', 'Número de Conta Em Uso!')
+
+			elif pull == 'False2':
+				QMessageBox.information(None, 'Evollutte Bank', 'CPF Em Uso!')
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
 	# Tela Menu
+	def menu(self):
+		push = '{}'.format('menuName')
+		pull = self.clientHost.submit(push)
+		self.screenMenu.lineEditMenuName.setText(pull)
+		push = '{}'.format('menuBalance')
+		pull = self.clientHost.submit(push)
+		self.screenMenu.lineEditMenuBalance.setText(pull)
+
 	def menuWithdraw(self):
 		self.screenWithdraw.lineEditWithdrawValue.setText('')
 		self.QtStack.setCurrentIndex(3)
@@ -125,10 +139,7 @@ class Main(ScreenTelas):
 		self.QtStack.setCurrentIndex(5)
 
 	def menuExtract(self):
-		push = "{}".format('extract')
-		pull = self.clientHost.submit(push)
-		
-		self.self.screenExtract.plainTextEdit.setPlainText(pull)
+		self.extract()
 		self.QtStack.setCurrentIndex(6)
 
 	# Tela Saque
@@ -140,6 +151,7 @@ class Main(ScreenTelas):
 			if pull == 'True':
 				self.screenWithdraw.lineEditWithdrawValue.setText('')
 				QMessageBox.information(None, 'Evollutte Bank', value)
+				self.menu()
 				self.QtStack.setCurrentIndex(2)
 			else:
 				QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
@@ -147,33 +159,37 @@ class Main(ScreenTelas):
 	# Tela Deposito
 	def deposit(self):
 		value = self.screenDeposit.lineEditDepositValue.text()
-		if not(value == ''):
-			
+		if not (value == ''):
 			push = '{}*{}'.format('deposit', value)
 			pull = self.clientHost.submit(push)
-			
 			if pull == 'True':
 				self.screenDeposit.lineEditDepositValue.setText('')
 				QMessageBox.information(None, 'Evollutte Bank', value)
+				self.menu()
 				self.QtStack.setCurrentIndex(2)
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
 
 	# Tela Tranferência
 	def transfer(self):
-		#account_origin = self.bank.get_account_2()
-		#number = self.screenTransfer.lineEditTransferAccountNumber.text()
-		#account_destiny = self.bank.get_account(number)
-		#if account_destiny:
-		#	value = self.screenTransfer.lineEditTransferValue.text()
-		#	message = account_origin.transfer(account_destiny, float(value))
-		#	QMessageBox.information(None, 'Evollutte Bank', message)
-		#	self.screenTransfer.lineEditTransferAccountNumber.setText('')
-		#	self.screenTransfer.lineEditTransferValue.setText('')
-		#	self.QtStack.setCurrentIndex(2)
-		#else:
-		#	self.screenTransfer.lineEditTransferAccountNumber.setText('')
-		QMessageBox.information(None, 'Evollutte Bank', 'Número de conta não encontrado!')
+		number = self.screenTransfer.lineEditTransferAccountNumber.text()
+		value = self.screenTransfer.lineEditTransferValue.text()
+		push = '{}*{}*{}'.format('transfer', number, value)
+		pull = self.clientHost.submit(push)
+		if pull == 'True':
+			QMessageBox.information(None, 'Evollutte Bank', 'Transferência Realizada Com Sucesso!')
+			self.screenTransfer.lineEditTransferAccountNumber.setText('')
+			self.screenTransfer.lineEditTransferValue.setText('')
+			self.menu()
+			self.QtStack.setCurrentIndex(2)
+		elif pull == 'False':
+			QMessageBox.information(None, 'Evollutte Bank', 'Número de Conta Não Encontrado')
+			self.screenTransfer.lineEditTransferAccountNumber.setText('')
+
+	def extract(self):
+		push = '{}'.format('extract')
+		pull = self.clientHost.submit(push)
+		self.self.screenExtract.plainTextEdit.setPlainText(pull)
 
 	# Padrão
 	def comeBackLogin(self):

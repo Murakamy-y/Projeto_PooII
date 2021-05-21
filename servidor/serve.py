@@ -32,21 +32,41 @@ class conectServ():
 		message = dados.split('*')
 		if message[0] == 'add_client':
 			c = Client(message[1], message[2], message[3])
-			a = Account(message[4], c, float(message[5]), message[6])
-			self.bank.add_client(c)
-			self.bank.add_account(a)
-			self.connection.send('True'.encode())
+			if not self.bank.get_client(message[3]):
+				a = Account(message[4], c, float(message[5]), message[6])
+				if not self.bank.get_account(message[4]):
+					self.bank.add_client(c)
+					self.bank.add_account(a)
+					print('Conta Criada Com Sucesso!')
+					self.connection.send('True'.encode())
+				else:
+					print('Número de Conta Em Uso!')
+					self.connection.send('False1'.encode())
+			else:
+				print('CPF Em Uso!')
+				self.connection.send('False2'.encode())
 
 		# Logar
 		elif message[0] == 'authenticated':
 			authenticated = self.bank.login(message[1], message[2])  # pelo numero da conta
 			if authenticated:
-				print('Acesso permitido')
+				print('Login Realizado Sucesso')
 				self.connection.send('True'.encode())
 			else:
-				self.connection.send('Conecção invalida'.encode())
+				print('Login Não Realizado!')
+				self.connection.send('Conexão inválida!'.encode())
 
-		# withdraw = Sacar
+		elif message[0] == 'menuName':
+			account = self.bank.get_account_2()
+			name = '{}'.format(account.holder.name.capitalize() + ' ' + account.holder.surname.capitalize())
+			self.connection.send(name.encode())
+
+		elif message[0] == 'menuBalance':
+			account = self.bank.get_account_2()
+			balance = '{}'.format(str(account.balance))
+			self.connection.send(balance.encode())
+
+		# withdraw
 		elif message[0] == 'withdraw':
 			account = self.bank.get_account_2()
 			if account.withdraw(float(message[1])):
@@ -60,32 +80,23 @@ class conectServ():
 			account.deposit(float(message[1]))
 			self.connection.send('True'.encode())
 
-		# transferir
+		# Transferir
 		elif message[0] == 'transfer':
-			print('ainda não fiz')
+			account_origin = self.bank.get_account_2()
+			account_destiny = self.bank.get_account(message[1])
+			if account_destiny:
+				account_origin.transfer(account_destiny, float(message[2]))
+				print('Transferência Realizada Com Sucesso!')
+				self.connection.send('True'.encode())
+			else:
+				print('Número de Conta Não Encontrado!')
+				self.connection.send('False'.encode())
+			# print('ainda não fiz')
 
-		# historico
+		# Extrato
 		elif message[0] == 'extract':
 			account = self.bank.get_account_2()
-			message[1] = account
-
-		# mydice meus dados
-		elif message[0] == 'myDice':
-			account = self.bank.get_account_2()
-			name = account.holder.name
-			surname = account.holder.surname
-			cpf = account.holder.cpf
-			number = account.number
-			balance = (str(account.balance))
-			limit = (str(account.limit))
-			push = '{}*{}*{}*{}*{}*{}'.format(name, surname, cpf, number, balance, limit)
-			self.connection.send(push.encode())
-
-		# balance Saldo
-		elif message[0] == 'balance':
-			account = self.bank.get_account_2()
-			valueBalance = '{}'.format(account.balance)
-			self.connection.send(valueBalance.encode())
+			self.connection.send(account.extract().encode())
 
 	def servClose(self):
 		self.servSocket.close()
