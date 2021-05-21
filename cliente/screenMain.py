@@ -11,6 +11,7 @@ from clientHost import ClientHost
 import datetime
 import socket
 
+
 class Main(ScreenTelas):
 	def __init__(self, parent=None):
 		super(Main, self).__init__(parent)
@@ -69,9 +70,9 @@ class Main(ScreenTelas):
 		cpf = self.screenInitial.lineEditLoginCPF.text()
 		password = self.screenInitial.lineEditLoginPassword.text()
 		if not (cpf == '' or password == ''):
-			push = '{}*{}*{}'.format(autenctic, cpf, senha)#enviar
+			push = '{}*{}*{}'.format('authenticated', cpf, password)#enviar
 			pull = self.clientHost.submit(push)#receber
-			if (pull == 'True'):
+			if pull == 'True':
 				self.cpf = cpf
 				QMessageBox.information(None, 'Evollutte Bank', 'Login realizado com sucesso!')
 				self.screenInitial.lineEditLoginCPF.setText('')
@@ -81,7 +82,7 @@ class Main(ScreenTelas):
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
 	def openScreenRegister(self):
-		#Não mostrar nenhum campo preenchidos
+		# Não mostrar nenhum campo preenchidos
 		self.screenRegister.lineEditRegisterName.setText('')
 		self.screenRegister.lineEditRegisterSurname.setText('')
 		self.screenRegister.lineEditRegisterCPF.setText('')
@@ -91,7 +92,7 @@ class Main(ScreenTelas):
 		self.QtStack.setCurrentIndex(1)
 
 	def exitApp(self):
-		#client_socket.close()
+		# client_socket.close()
 		QMessageBox.information(None, 'Evollutte Bank', 'Programa Finalizado')
 		sys.exit(app.exec_())
 
@@ -105,18 +106,17 @@ class Main(ScreenTelas):
 		password = self.screenRegister.lineEditRegisterAccountPassword.text()
 		
 		if not (name == '' or surname == '' or cpf == '' or number == '' or value == '' or password == ''):
-			push = ('{},{},{},{},{},{},{}'.format( add_client,name, surname, cpf, number, value, password))
+			push = '{}*{}*{}*{}*{}*{}*{}'.format('add_client', name, surname, cpf, number, value, password)
 			pull = self.clientHost.submit(push)
-			if (pull == 'True'):
-					QMessageBox.information(None, 'Evollutte Bank', 'Cadastro realizado com sucesso!')
-					self.screenRegister.lineEditRegisterName.setText('')
-					self.screenRegister.lineEditRegisterSurname.setText('')
-					self.screenRegister.lineEditRegisterCPF.setText('')
-					self.screenRegister.lineEditRegisterAccountNumber.setText('')
-					self.screenRegister.lineEditRegisterAccountBalance.setText('')
-					self.screenRegister.lineEditRegisterAccountPassword.setText('')
-					self.QtStack.setCurrentIndex(0)
-		
+			if pull == 'True':
+				QMessageBox.information(None, 'Evollutte Bank', 'Cadastro realizado com sucesso!')
+				self.screenRegister.lineEditRegisterName.setText('')
+				self.screenRegister.lineEditRegisterSurname.setText('')
+				self.screenRegister.lineEditRegisterCPF.setText('')
+				self.screenRegister.lineEditRegisterAccountNumber.setText('')
+				self.screenRegister.lineEditRegisterAccountBalance.setText('')
+				self.screenRegister.lineEditRegisterAccountPassword.setText('')
+				self.QtStack.setCurrentIndex(0)
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
@@ -139,27 +139,26 @@ class Main(ScreenTelas):
 		self.QtStack.setCurrentIndex(9)
 
 	def menuBalance(self):
-		push = '{}'.format(myDice)
+		push = '{}'.format('balance')
 		pull = self.clientHost.submit(push)
-		#self.screenBalance.lineEditBalanceValue.setText(str(account.balance))
+		self.screenBalance.lineEditBalanceValue.setText(pull)
 		self.QtStack.setCurrentIndex(6)
 
 	def menuMyDice(self):
-		#account = self.bank.get_account_2()
-		push = "{}".format(myDice)
+		push = '{}'.format('myDice')
 		pull = self.clientHost.submit(push)
-
-		self.screenMyDice.lineEditMyDiceName.setText(pull)
-		self.screenMyDice.lineEditMyDiceSurname.setText(pull)
-		self.screenMyDice.lineEditMyDiceCPF.setText(pull)
-		self.screenMyDice.lineEditMyDiceAccountNumber.setText(pull)
-		self.screenMyDice.lineEditMyDiceAccountHolder.setText(pull)
-		self.screenMyDice.lineEditMyDiceAccountBalance.setText(pull)
-		self.screenMyDice.lineEditMyDiceAccountLimit.setText(pull)
+		message = pull.split('*')
+		self.screenMyDice.lineEditMyDiceName.setText(message[0])
+		self.screenMyDice.lineEditMyDiceSurname.setText(message[1])
+		self.screenMyDice.lineEditMyDiceCPF.setText(message[2])
+		self.screenMyDice.lineEditMyDiceAccountNumber.setText(message[3])
+		self.screenMyDice.lineEditMyDiceAccountHolder.setText(message[4])
+		self.screenMyDice.lineEditMyDiceAccountBalance.setText(message[5])
+		self.screenMyDice.lineEditMyDiceAccountLimit.setText(message[6])
 		self.QtStack.setCurrentIndex(7)
 
 	def menuExtract(self):
-		push = "{}".format(extract)
+		push = "{}".format('extract')
 		pull = self.clientHost.submit(push)
 		
 		self.self.screenExtract.plainTextEdit.setPlainText(pull)
@@ -169,7 +168,7 @@ class Main(ScreenTelas):
 	def withdraw(self):
 		value = self.screenWithdraw.lineEditWithdrawValue.text()
 		if not(value == ''):
-			push = '{}*{}*{}'.format(deposit,self.cpf,value)
+			push = '{}*{}'.format('withdraw', value)
 			pull = self.clientHost.submit(push)
 			if pull == 'True':
 				self.screenWithdraw.lineEditWithdrawValue.setText('')
@@ -177,22 +176,22 @@ class Main(ScreenTelas):
 				self.QtStack.setCurrentIndex(2)
 			else:
 				QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
-		
 
 	# Tela Deposito
 	def deposit(self):
 		value = self.screenDeposit.lineEditDepositValue.text()
 		if not(value == ''):
 			
-			push = '{}*{}*{}'.format(deposit,self.cpf,value)
+			push = '{}*{}'.format('deposit', value)
 			pull = self.clientHost.submit(push)
 			
-			if (pull == 'True'):
+			if pull == 'True':
 				self.screenDeposit.lineEditDepositValue.setText('')
 				QMessageBox.information(None, 'Evollutte Bank', value)
 				self.QtStack.setCurrentIndex(2)
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
+
 	# Tela Tranferência
 	def transfer(self):
 		#account_origin = self.bank.get_account_2()

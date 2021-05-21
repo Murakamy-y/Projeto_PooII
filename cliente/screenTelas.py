@@ -12,6 +12,7 @@ from screenTransfer import ScreenTransfer
 from screenWithdraw import ScreenWithdraw
 from screenChat import ScreenChat
 
+
 class ScreenTelas(QtWidgets.QWidget):
 	def setupUI(self, Main):
 		Main.setObjectName('Main')
