@@ -1,3 +1,7 @@
+'''
+Class Client: Essa classe é utilizada com o intuito de cadastrar os cliente
+'''
+
 class Client:
 
 	__slots__ = ['_name', '_surname', '_cpf']

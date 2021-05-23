@@ -1,3 +1,18 @@
+'''
+Classe Servidor: Para conectar o servidor as tela e informações do cliente
+
+Metodos criados
+-----------------
+	connectionServ:
+		Utilizado para ligar o servidor e aguarda alguma conexão com o cliente para iniciarmos
+
+	communication:
+		Serve para enviar e receber dados entre o cliente e servidor
+
+	servClose:
+		Utilizado para fechar o servidor
+
+'''
 import socket
 import pickle
 
@@ -30,7 +45,7 @@ class conectServ():
 
 	def communication(self):
 		dados = self.connection.recv(1024).decode()
-		message = dados.split('*')
+		message = dados.split('π∛')
 		if message[0] == 'add_client':
 			c = Client(message[1], message[2], message[3])
 			if not self.bank.get_client(message[3]):
@@ -102,7 +117,7 @@ class conectServ():
 			extracts = account.extract.display_extract()
 			print('Tirou Extrato!')
 			self.connection.send(extracts.encode())
-
+			
 	def servClose(self):
 		self.servSocket.close()
 		print("Server finalizado.")

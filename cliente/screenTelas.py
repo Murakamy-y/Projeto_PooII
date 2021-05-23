@@ -1,3 +1,9 @@
+'''
+Classe ScreenTelas, criada para chamar todas as telas. e configurar
+o layout
+
+'''
+
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QStackedLayout
 

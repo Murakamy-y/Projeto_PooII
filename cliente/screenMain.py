@@ -1,3 +1,8 @@
+'''
+Classe Main, utilizado a fim de receber e enviar dados para o servidor
+
+'''
+
 import sys
 import os
 
@@ -54,7 +59,7 @@ class Main(ScreenTelas):
 		cpf = self.screenInitial.lineEditLoginCPF.text()
 		password = self.screenInitial.lineEditLoginPassword.text()
 		if not (cpf == '' or password == ''):
-			push = '{}*{}*{}'.format('authenticated', cpf, password)  # enviar
+			push = '{}π∛{}π∛{}'.format('authenticated', cpf, password)  # enviar
 			pull = self.clientHost.submit(push)  # receber
 			if pull == 'True':
 				self.cpf = cpf
@@ -68,6 +73,7 @@ class Main(ScreenTelas):
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
+	#	chama a tela de registro do cliente
 	def openScreenRegister(self):
 		# Não mostrar nenhum campo preenchidos
 		self.screenRegister.lineEditRegisterName.setText('')
@@ -78,7 +84,8 @@ class Main(ScreenTelas):
 		self.screenRegister.lineEditRegisterAccountPassword.setText('')
 		self.QtStack.setCurrentIndex(1)
 
-	def exitApp(self):
+	#	saida da aplicação
+	def exitApp(self):		
 		# client_socket.close()
 		QMessageBox.information(None, 'Evollutte Bank', 'Programa Finalizado')
 		sys.exit(app.exec_())
@@ -93,7 +100,7 @@ class Main(ScreenTelas):
 		password = self.screenRegister.lineEditRegisterAccountPassword.text()
 		
 		if not (name == '' or surname == '' or cpf == '' or number == '' or value == '' or password == ''):
-			push = '{}*{}*{}*{}*{}*{}*{}'.format('add_client', name, surname, cpf, number, value, password)
+			push = '{}π∛{}π∛{}π∛{}π∛{}π∛{}π∛{}'.format('add_client', name, surname, cpf, number, value, password)
 			pull = self.clientHost.submit(push)
 			if pull == 'True':
 				QMessageBox.information(None, 'Evollutte Bank', 'Cadastro realizado com sucesso!')
@@ -122,19 +129,23 @@ class Main(ScreenTelas):
 		pull = self.clientHost.submit(push)
 		self.screenMenu.lineEditMenuBalance.setText(pull)
 
+	#	chama a tela de saque
 	def menuWithdraw(self):
 		self.screenWithdraw.lineEditWithdrawValue.setText('')
 		self.QtStack.setCurrentIndex(3)
 
+	#	chama a tela de deposito
 	def menuDeposit(self):
 		self.screenDeposit.lineEditDepositValue.setText('')
 		self.QtStack.setCurrentIndex(4)
 
+	#	chama a tela de transferencia
 	def menuTransfer(self):
 		self.screenTransfer.lineEditTransferAccountNumber.setText('')
 		self.screenTransfer.lineEditTransferValue.setText('')
 		self.QtStack.setCurrentIndex(5)
 
+	#	onde é mostrado o extrato do cliente
 	def menuExtract(self):
 		push = '{}'.format('extract')
 		pull = self.clientHost.submit(push)
@@ -145,7 +156,7 @@ class Main(ScreenTelas):
 	def withdraw(self):
 		value = self.screenWithdraw.lineEditWithdrawValue.text()
 		if not(value == ''):
-			push = '{}*{}'.format('withdraw', value)
+			push = '{}π∛{}'.format('withdraw', value)
 			pull = self.clientHost.submit(push)
 			if pull == 'True':
 				self.screenWithdraw.lineEditWithdrawValue.setText('')
@@ -159,7 +170,7 @@ class Main(ScreenTelas):
 	def deposit(self):
 		value = self.screenDeposit.lineEditDepositValue.text()
 		if not (value == ''):
-			push = '{}*{}'.format('deposit', value)
+			push = '{}π∛{}'.format('deposit', value)
 			pull = self.clientHost.submit(push)
 			if pull == 'True':
 				self.screenDeposit.lineEditDepositValue.setText('')
@@ -173,7 +184,7 @@ class Main(ScreenTelas):
 	def transfer(self):
 		number = self.screenTransfer.lineEditTransferAccountNumber.text()
 		value = self.screenTransfer.lineEditTransferValue.text()
-		push = '{}*{}*{}'.format('transfer', number, value)
+		push = '{}π∛{}π∛{}'.format('transfer', number, value)
 		pull = self.clientHost.submit(push)
 		if pull == 'True':
 			QMessageBox.information(None, 'Evollutte Bank', 'Transferência Realizada Com Sucesso!')
@@ -185,12 +196,13 @@ class Main(ScreenTelas):
 			QMessageBox.information(None, 'Evollutte Bank', 'Número de Conta Não Encontrado')
 			self.screenTransfer.lineEditTransferAccountNumber.setText('')
 
-	# Padrão
+	# Botao para voltar a tela de login
 	def comeBackLogin(self):
 		self.screenInitial.lineEditLoginCPF.setText('')
 		self.screenInitial.lineEditLoginPassword.setText('')
 		self.QtStack.setCurrentIndex(0)
 
+	#	Botao para voltar a tela principal
 	def comeBack(self):
 		self.QtStack.setCurrentIndex(2)
 

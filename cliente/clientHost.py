@@ -1,3 +1,19 @@
+'''
+Classe ClientHost: Essa classe é utilizada a fim de fazer a conexão do cliente servidor
+
+Metodos criados
+----------------------------------------------------------------
+	connectClient:
+		utilizado para conectar ao servidor
+
+	submit:
+		utilizado para receber informações do servidor e enviar informações ao servidor
+
+	close: 
+		fechar o servidor do cliente
+'''
+
+
 import socket
 
 host = 'localhost'

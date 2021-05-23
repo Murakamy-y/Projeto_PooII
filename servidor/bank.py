@@ -1,3 +1,27 @@
+'''
+Class Bank: local utilizada para armazenar e verificar informação
+
+Metodos criados
+-----------------
+	add_client:
+		adicionar o cliente em um dicionario
+
+	get_client
+		verificar se já existe algum cliente utilizando o cpf informado
+
+	add_account
+		adiciona uma conta no dicionario e já a vincula em um cliente
+
+	get_account
+		verifica se o numero da conta já está sendo utilizado
+
+	get_account_2
+		verifica se o numero da conta já está sendo utilizado
+
+	login
+		verifica se a senha e o cpf está vinculada ao banco
+'''
+
 from client import Client
 from account import Account
 import os
@@ -26,10 +50,6 @@ class Bank:
 	def add_account(self, account):
 		self._accounts[account.number] = account
 
-	def display_accounts(self):
-		for key, item in self._accounts.items():
-			item.display_account()
-
 	def get_account(self, number):
 		if number in self._accounts:
 			return self._accounts[number]
@@ -39,20 +59,6 @@ class Bank:
 	def get_account_2(self):
 		if self.logNumber in self._accounts:
 			return self._accounts[self.logNumber]
-		else:
-			return None
-
-	def get_account_client(self, cpf, number):
-		c = self.get_account(cpf)
-		if c is not None and c.number == number:
-			return c
-		else:
-			return None
-
-	def get_account_client_2(self):
-		c = self.get_account(self.logNumber)
-		if c is not None and c.holder.cpf == self.logCPF:
-			return c
 		else:
 			return None
 

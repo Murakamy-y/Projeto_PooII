@@ -1,6 +1,9 @@
+'''
+class Account: Essa classe é utilizada a fim de cadastrar a conta que o cliente vai utilizar no banco.
+'''
+
 from extract import Extract
 import datetime
-
 
 class Account:
 
@@ -15,6 +18,7 @@ class Account:
 		self._password = password
 		self._extract = Extract()
 		Account._total_accounts += 1
+
 
 	@property
 	def number(self):
@@ -41,6 +45,16 @@ class Account:
 		return self._extract
 
 	def withdraw(self, value):
+		'''
+		:param value: float
+			valor do tipo float
+		:raise:
+			aceita valores do tipo inteiro e flutuante
+
+		:return:
+			informa uma mensagem, avisando que a saque foi um sucesso.
+			informa o restante do saldo presente na sua carteira após o termino da operação.
+		'''
 		if value < 0:
 			return 'Valor sacado não pode ser negativo!'
 		elif value > self._balance + self._limit:
@@ -52,6 +66,16 @@ class Account:
 			return 'Saque realizado com sucesso!\nSaldo restante = {:.2f}'.format(self._balance)
 
 	def deposit(self, value):
+		'''
+		:param value: float
+			valor do tipo float
+		:raise:
+			aceita valores do tipo inteiro e flutuante
+
+		:return:
+			informa uma mensagem, avisando que o deposito foi um sucesso.
+			informa o restante do saldo presente na sua carteira após o termino da operação.
+		'''
 		if value < 0:
 			return 'Valor depositado não pode ser negativo!'
 		else:
@@ -61,6 +85,18 @@ class Account:
 			return 'Deposito realizado com sucesso!\nSaldo da conta = {:.2f}'.format(self.balance)
 
 	def transfer(self, destiny, value):
+		'''
+		:param destiny: str
+			valor do tipo str
+		:param value: float
+			valor do tipo float
+		:raise:
+			aceita valores de tipo str
+			aceita valores do tipo inteiro e flutuante
+
+		:return:
+			informa uma mensagem, avisando que a transferencia foi um sucesso.
+		'''
 		if value < 0:
 			return 'Valor a ser transferido não pode ser negativo!'
 		elif value > self._balance + self._limit:
@@ -75,6 +111,7 @@ class Account:
 			destiny._extract.add_extract(' - Recebeu {:.2f} por transferência da conta {} em {}\n'.format(value, self._number, date))
 			return 'Transferencia realizada com sucesso!'
 
+	#	contar a quantidade de contas
 	@staticmethod
 	def get_total_accounts():
 		return Account._total_accounts
