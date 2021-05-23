@@ -10,6 +10,7 @@ from screenRegister import ScreenRegister
 from screenTransfer import ScreenTransfer
 from screenWithdraw import ScreenWithdraw
 
+
 class ScreenTelas(QtWidgets.QWidget):
 	def setupUI(self, Main):
 		Main.setObjectName('Main')
@@ -24,9 +25,6 @@ class ScreenTelas(QtWidgets.QWidget):
 		self.stack4 = QtWidgets.QMainWindow()
 		self.stack5 = QtWidgets.QMainWindow()
 		self.stack6 = QtWidgets.QMainWindow()
-		self.stack7 = QtWidgets.QMainWindow()
-		self.stack8 = QtWidgets.QMainWindow()
-		self.stack9 = QtWidgets.QMainWindow()
 
 		self.screenInitial = ScreenInitial()
 		self.screenInitial.setupUi(self.stack0)
@@ -56,4 +54,3 @@ class ScreenTelas(QtWidgets.QWidget):
 		self.QtStack.addWidget(self.stack4)
 		self.QtStack.addWidget(self.stack5)
 		self.QtStack.addWidget(self.stack6)
-

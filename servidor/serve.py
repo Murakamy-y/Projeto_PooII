@@ -1,8 +1,9 @@
 import socket
+import pickle
 
 from account import Account
 from client import Client
-from historic import Historic
+from extract import Extract
 from bank import Bank
 
 host = 'localhost'
@@ -70,14 +71,17 @@ class conectServ():
 		elif message[0] == 'withdraw':
 			account = self.bank.get_account_2()
 			if account.withdraw(float(message[1])):
+				print('Saque Realizado Com Sucesso!')
 				self.connection.send('True'.encode())
-			else: 
+			else:
+				print('Erro No Saque!')
 				self.connection.send('Erro no saque'.encode())
 
 		# depositar
 		elif message[0] == 'deposit':
 			account = self.bank.get_account_2()
 			account.deposit(float(message[1]))
+			print('Deposito Realizado com Sucesso!')
 			self.connection.send('True'.encode())
 
 		# Transferir
@@ -91,12 +95,13 @@ class conectServ():
 			else:
 				print('Número de Conta Não Encontrado!')
 				self.connection.send('False'.encode())
-			# print('ainda não fiz')
 
 		# Extrato
 		elif message[0] == 'extract':
 			account = self.bank.get_account_2()
-			self.connection.send(account.extract().encode())
+			extracts = account.extract.display_extract()
+			print('Tirou Extrato!')
+			self.connection.send(extracts.encode())
 
 	def servClose(self):
 		self.servSocket.close()

@@ -10,7 +10,7 @@ class ClientHost(object):
 		self.clientSocket = None
 
 	def connectClient(self):	
-		self.addr = (host, port)  # define a tupla de endereco
+		self.addr = ((host, port))  # define a tupla de endereco
 		self.clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # AF_INET parametro para informar a familia do protocolo, SOCK_STREAM indica que eh TCP/IP
 		self.clientSocket.connect(self.addr)
 		

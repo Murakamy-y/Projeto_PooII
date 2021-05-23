@@ -2,14 +2,11 @@ import sys
 import os
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
+from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox, QPlainTextEdit
 from PyQt5.QtCore import QCoreApplication
 
 from screenTelas import ScreenTelas
 from clientHost import ClientHost
-
-import datetime
-import socket
 
 
 class Main(ScreenTelas):
@@ -139,7 +136,9 @@ class Main(ScreenTelas):
 		self.QtStack.setCurrentIndex(5)
 
 	def menuExtract(self):
-		self.extract()
+		push = '{}'.format('extract')
+		pull = self.clientHost.submit(push)
+		self.screenExtract.plainTextEdit.setPlainText(pull)
 		self.QtStack.setCurrentIndex(6)
 
 	# Tela Saque
@@ -185,11 +184,6 @@ class Main(ScreenTelas):
 		elif pull == 'False':
 			QMessageBox.information(None, 'Evollutte Bank', 'Número de Conta Não Encontrado')
 			self.screenTransfer.lineEditTransferAccountNumber.setText('')
-
-	def extract(self):
-		push = '{}'.format('extract')
-		pull = self.clientHost.submit(push)
-		self.self.screenExtract.plainTextEdit.setPlainText(pull)
 
 	# Padrão
 	def comeBackLogin(self):
