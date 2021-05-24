@@ -17,6 +17,10 @@ from clientHost import ClientHost
 class Main(ScreenTelas):
 	def __init__(self, parent=None):
 		super(Main, self).__init__(parent)
+		'''
+		DESCRIPTION:
+			utilizado a fim de receber e enviar dados para o servidor e conectar os botão as tela			
+		'''
 		self.cpf = ''
 		self.number = ''
 		self.setupUI(self)
@@ -24,38 +28,38 @@ class Main(ScreenTelas):
 		self.clientHost.connectClient()
 		
 		# Tela Inicial
-		self.screenInitial.pushButtonLogin.clicked.connect(self.buttonLogin)
-		self.screenInitial.pushButtonCreateAccount.clicked.connect(self.openScreenRegister)
-		self.screenInitial.pushButtonExit.clicked.connect(self.exitApp)
+		self.screenInitial.pushButtonLogin.clicked.connect(self.buttonLogin) # Botão da tela inicial
+		self.screenInitial.pushButtonCreateAccount.clicked.connect(self.openScreenRegister) # Botão da tela inicial
+		self.screenInitial.pushButtonExit.clicked.connect(self.exitApp) # Botão da tela inicial
 
 		# Tela Registro
-		self.screenRegister.pushButtonRegister.clicked.connect(self.buttonRegister)
-		self.screenRegister.pushButtonComeBack.clicked.connect(self.comeBackLogin)
+		self.screenRegister.pushButtonRegister.clicked.connect(self.buttonRegister) # Botão da tela Registro
+		self.screenRegister.pushButtonComeBack.clicked.connect(self.comeBackLogin) # Botão da tela Registro
 
 		# Tela Menu
-		self.screenMenu.pushButtonWithdraw.clicked.connect(self.menuWithdraw)
-		self.screenMenu.pushButtonDeposit.clicked.connect(self.menuDeposit)
-		self.screenMenu.pushButtonTransfer.clicked.connect(self.menuTransfer)
-		self.screenMenu.pushButtonExtract.clicked.connect(self.menuExtract)
-		self.screenMenu.pushButtonExit.clicked.connect(self.comeBackLogin)
+		self.screenMenu.pushButtonWithdraw.clicked.connect(self.menuWithdraw) # Botão da tela Menu
+		self.screenMenu.pushButtonDeposit.clicked.connect(self.menuDeposit) # Botão da tela Menu
+		self.screenMenu.pushButtonTransfer.clicked.connect(self.menuTransfer) # Botão da tela Menu
+		self.screenMenu.pushButtonExtract.clicked.connect(self.menuExtract) # Botão da tela Menu
+		self.screenMenu.pushButtonExit.clicked.connect(self.comeBackLogin) # Botão da tela Menu
 
 		# Tela saque
-		self.screenWithdraw.pushButtonWithdrawWithdraw.clicked.connect(self.withdraw)
-		self.screenWithdraw.pushButtonComeBack.clicked.connect(self.comeBack)
+		self.screenWithdraw.pushButtonWithdrawWithdraw.clicked.connect(self.withdraw) # Botão da tela saque
+		self.screenWithdraw.pushButtonComeBack.clicked.connect(self.comeBack) # Botão da tela saque
 
 		# Tela deposito
-		self.screenDeposit.pushButtonDepositDeposit.clicked.connect(self.deposit)
-		self.screenDeposit.pushButtonComeBack.clicked.connect(self.comeBack)
+		self.screenDeposit.pushButtonDepositDeposit.clicked.connect(self.deposit) # Botão da tela deposito
+		self.screenDeposit.pushButtonComeBack.clicked.connect(self.comeBack) # Botão da tela deposito
 
 		# Tela tranferencia
-		self.screenTransfer.pushButtonTransferTransfer.clicked.connect(self.transfer)
-		self.screenTransfer.pushButtonComeBack.clicked.connect(self.comeBack)
+		self.screenTransfer.pushButtonTransferTransfer.clicked.connect(self.transfer) # Botão da tela tranferencia
+		self.screenTransfer.pushButtonComeBack.clicked.connect(self.comeBack) # Botão da tela tranferencia
 
 		# Tela Extrato
-		self.screenExtract.pushButtonComeBack.clicked.connect(self.comeBack)
+		self.screenExtract.pushButtonComeBack.clicked.connect(self.comeBack) # Botão da tela extrato
 
-	#   Tela Inicial
-	def buttonLogin(self):
+	
+	def buttonLogin(self): #   Tela Inicial
 		cpf = self.screenInitial.lineEditLoginCPF.text()
 		password = self.screenInitial.lineEditLoginPassword.text()
 		if not (cpf == '' or password == ''):
@@ -73,8 +77,7 @@ class Main(ScreenTelas):
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
-	#	chama a tela de registro do cliente
-	def openScreenRegister(self):
+	def openScreenRegister(self): #	chama a tela de registro do cliente
 		# Não mostrar nenhum campo preenchidos
 		self.screenRegister.lineEditRegisterName.setText('')
 		self.screenRegister.lineEditRegisterSurname.setText('')
@@ -84,14 +87,13 @@ class Main(ScreenTelas):
 		self.screenRegister.lineEditRegisterAccountPassword.setText('')
 		self.QtStack.setCurrentIndex(1)
 
-	#	saida da aplicação
-	def exitApp(self):		
+	
+	def exitApp(self):	#	saida da aplicação	
 		# client_socket.close()
 		QMessageBox.information(None, 'Evollutte Bank', 'Programa Finalizado')
 		sys.exit(app.exec_())
 
-	# Tela de Registro
-	def buttonRegister(self):
+	def buttonRegister(self): # Tela de Registro
 		name = self.screenRegister.lineEditRegisterName.text()
 		surname = self.screenRegister.lineEditRegisterSurname.text()
 		cpf = self.screenRegister.lineEditRegisterCPF.text()
@@ -120,8 +122,7 @@ class Main(ScreenTelas):
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
-	# Tela Menu
-	def menu(self):
+	def menu(self): # Tela Menu
 		push = '{}'.format('menuName')
 		pull = self.clientHost.submit(push)
 		self.screenMenu.lineEditMenuName.setText(pull)
@@ -129,31 +130,26 @@ class Main(ScreenTelas):
 		pull = self.clientHost.submit(push)
 		self.screenMenu.lineEditMenuBalance.setText(pull)
 
-	#	chama a tela de saque
-	def menuWithdraw(self):
+	def menuWithdraw(self): #	chama a tela de saque
 		self.screenWithdraw.lineEditWithdrawValue.setText('')
 		self.QtStack.setCurrentIndex(3)
 
-	#	chama a tela de deposito
-	def menuDeposit(self):
+	def menuDeposit(self): #	chama a tela de deposito
 		self.screenDeposit.lineEditDepositValue.setText('')
 		self.QtStack.setCurrentIndex(4)
-
-	#	chama a tela de transferencia
-	def menuTransfer(self):
+	
+	def menuTransfer(self): #	chama a tela de transferencia
 		self.screenTransfer.lineEditTransferAccountNumber.setText('')
 		self.screenTransfer.lineEditTransferValue.setText('')
 		self.QtStack.setCurrentIndex(5)
 
-	#	onde é mostrado o extrato do cliente
-	def menuExtract(self):
+	def menuExtract(self): #	onde é mostrado o extrato do cliente
 		push = '{}'.format('extract')
 		pull = self.clientHost.submit(push)
 		self.screenExtract.plainTextEdit.setPlainText(pull)
 		self.QtStack.setCurrentIndex(6)
 
-	# Tela Saque
-	def withdraw(self):
+	def withdraw(self): # Tela Saque
 		value = self.screenWithdraw.lineEditWithdrawValue.text()
 		if not(value == ''):
 			push = '{}π∛{}'.format('withdraw', value)
@@ -166,8 +162,7 @@ class Main(ScreenTelas):
 			else:
 				QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
 
-	# Tela Deposito
-	def deposit(self):
+	def deposit(self): # Tela Deposito
 		value = self.screenDeposit.lineEditDepositValue.text()
 		if not (value == ''):
 			push = '{}π∛{}'.format('deposit', value)
@@ -180,8 +175,7 @@ class Main(ScreenTelas):
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
 
-	# Tela Tranferência
-	def transfer(self):
+	def transfer(self): # Tela Tranferência
 		number = self.screenTransfer.lineEditTransferAccountNumber.text()
 		value = self.screenTransfer.lineEditTransferValue.text()
 		push = '{}π∛{}π∛{}'.format('transfer', number, value)
@@ -196,14 +190,12 @@ class Main(ScreenTelas):
 			QMessageBox.information(None, 'Evollutte Bank', 'Número de Conta Não Encontrado')
 			self.screenTransfer.lineEditTransferAccountNumber.setText('')
 
-	# Botao para voltar a tela de login
-	def comeBackLogin(self):
+	def comeBackLogin(self): # Botao para voltar a tela de login
 		self.screenInitial.lineEditLoginCPF.setText('')
 		self.screenInitial.lineEditLoginPassword.setText('')
 		self.QtStack.setCurrentIndex(0)
 
-	#	Botao para voltar a tela principal
-	def comeBack(self):
+	def comeBack(self): #	Botao para voltar a tela principal
 		self.QtStack.setCurrentIndex(2)
 
 

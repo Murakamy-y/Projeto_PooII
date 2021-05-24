@@ -11,6 +11,10 @@ class Account:
 	__slots__ = ['_number', '_holder', '_balance', '_limit', '_extract', '_password']
 
 	def __init__(self, number, client, balance, password, limit=1000.0):
+		'''
+		DESCRIPTION:
+			Essa classe é utilizada a fim de cadastrar a conta que o cliente vai utilizar no banco.
+		'''
 		self._number = number
 		self._holder = client
 		self._balance = balance

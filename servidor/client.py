@@ -7,6 +7,10 @@ class Client:
 	__slots__ = ['_name', '_surname', '_cpf']
 
 	def __init__(self, name, surname, cpf):
+		'''
+		DESCRIPTION:
+			Essa classe é utilizada com o intuito de cadastrar os cliente
+		'''
 		self._name = name
 		self._surname = surname
 		self._cpf = cpf

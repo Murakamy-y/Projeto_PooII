@@ -34,35 +34,55 @@ class Bank:
 		self.logCPF = None
 		self.logNumber = None
 
-	#   Cliente --------------------------------------------------------------------------------------------------------
-
 	def add_client(self, client):
+		'''
+		DESCRIPTION:
+			Essa função serve para adicionar cliente no banco e salvar num dicionario com o seu cpf
+		'''
 		self._clients[client.cpf] = client
 
 	def get_client(self, cpf):
+		'''
+		DESCRIPTION:
+			Verificar se já existe algum cliente utilizando o cpf informado
+		'''
 		if cpf in self._clients:
 			return self._clients[cpf]
 		else:
 			return None
 	
-	# 	Conta ----------------------------------------------------------------------------------------------------------
-
 	def add_account(self, account):
+		'''
+		DESCRIPTION:
+			adiciona uma conta no dicionario e já a vincula em um cliente
+		'''
 		self._accounts[account.number] = account
 
 	def get_account(self, number):
+		'''
+		DESCRIPTION:
+			verifica se o numero da conta já está sendo utilizado
+		'''
 		if number in self._accounts:
 			return self._accounts[number]
 		else:
 			return None
 	
 	def get_account_2(self):
+		'''
+		DESCRIPTION:
+			verifica se o numero da conta já está sendo utilizado
+		'''
 		if self.logNumber in self._accounts:
 			return self._accounts[self.logNumber]
 		else:
 			return None
 
 	def login(self, cpf, password):
+		'''
+		DESCRIPTION:
+			verifica se a senha e o cpf está vinculada ao banco
+		'''
 		for key, a in self._accounts.items():
 			if a.holder.cpf == cpf and a.password == password:
 				self.logCPF = a.holder.cpf

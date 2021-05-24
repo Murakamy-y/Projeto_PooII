@@ -1,0 +1,3013 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033\deflangfe1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\froman\fprq2\fcharset0 Times New Roman;}{\f2\fmodern\fprq1\fcharset0 Courier New;}}
+{\colortbl ;\red0\green128\blue0;\red96\green64\blue32;\red0\green32\blue128;\red128\green0\blue0;\red255\green255\blue255;}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}{\s3 heading 3;}{\s4 heading 4;}}
+{\*\generator Riched20 10.0.21387}\viewkind4\uc1 
+\pard\widctlpar\sa60\qc\f0\fs24\par
+\par
+\par
+\par
+\par
+\par
+\par
+
+\pard\widctlpar\sb240\sa60\qc\kerning28\b\fs32 Banco Cliente\par
+
+\pard\widctlpar\sa60\qc\kerning0\b0\fs24\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+AUTHOR\par
+Vers\'e3o 1.0\par
+Segunda, 24 de Maio de 2021 \par
+
+\pard\keepn\widctlpar\s1\sb240\sa60\page\page\kerning36\b\fs36 Sum\'e1rio\par
+
+\pard\kerning0\b0\f1\fs24\par
+Table of contents\par
+\par
+\par
+\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\b\f0\fs36 <em>Namespaces</em>\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\fs28 Lista de Namespaces\par
+
+\pard\kerning0\b0\f1\fs22 Esta \'e9 a lista de todos os Namespaces com suas respectivas descri\'e7\'f5es:\fs24\par
+
+\pard\widctlpar\li360\sb27\sa27\tqr\tldot\tx8640\b\fs20 clientHost \b0  \tab pagenum\par
+\b screenBalance \b0  \tab pagenum\par
+\b screenDeposit \b0  \tab pagenum\par
+\b screenExtract \b0  \tab pagenum\par
+\b screenInitial \b0  \tab pagenum\par
+\b screenMain \b0  \tab pagenum\par
+\b screenMenu \b0  \tab pagenum\par
+\b screenRegister \b0  \tab pagenum\par
+\b screenTelas \b0  \tab pagenum\par
+\b screenTransfer \b0  \tab pagenum\par
+\b screenWithdraw \b0  \tab pagenum\par
+\b testpoo \b0  \tab pagenum\par
+\par
+
+\pard\fs24\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\b\f0\fs36\'cdndice Hier\'e1rquico\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\fs28 Hierarquia de Classes\par
+
+\pard\kerning0\b0\f1\fs22 Esta lista de hierarquias est\'e1 parcialmente ordenada (ordem alfab\'e9tica):\fs24\par
+
+\pard\widctlpar\li360\sb27\sa27\tqr\tldot\tx8640\fs20 object\par
+
+\pard\widctlpar\li720\sb24\sa24\tqr\tldot\tx8640 clientHost.ClientHost\tab pagenum\par
+screenBalance.ScreenBalance\tab pagenum\par
+screenDeposit.ScreenDeposit\tab pagenum\par
+screenExtract.ScreenExtract\tab pagenum\par
+screenInitial.ScreenInitial\tab pagenum\par
+screenMenu.ScreenMenu\tab pagenum\par
+screenRegister.ScreenRegister\tab pagenum\par
+screenTransfer.ScreenTransfer\tab pagenum\par
+screenWithdraw.ScreenWithdraw\tab pagenum\par
+
+\pard\widctlpar\li360\sb27\sa27\tqr\tldot\tx8640\par
+QtWidgets.QWidget\par
+
+\pard\widctlpar\li720\sb24\sa24\tqr\tldot\tx8640 screenTelas.ScreenTelas\tab pagenum\par
+
+\pard\widctlpar\li1080\sb21\sa21\tqr\tldot\tx8640 screenMain.Main\tab pagenum\par
+
+\pard\widctlpar\li720\sb24\sa24\tqr\tldot\tx8640\par
+
+\pard\widctlpar\li360\sb27\sa27\tqr\tldot\tx8640\par
+
+\pard\fs24\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\b\f0\fs36\'cdndice dos Componentes\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\fs28 Lista de Classes\par
+
+\pard\kerning0\b0\f1\fs22 Aqui est\'e3o as classes, estruturas, uni\'f5es e interfaces e suas respectivas descri\'e7\'f5es:\fs24\par
+
+\pard\widctlpar\li360\sb27\sa27\tqr\tldot\tx8640\b\fs20 clientHost.ClientHost \b0  \tab pagenum\par
+\b screenMain.Main \b0  \tab pagenum\par
+\b screenBalance.ScreenBalance \b0  \tab pagenum\par
+\b screenDeposit.ScreenDeposit \b0  \tab pagenum\par
+\b screenExtract.ScreenExtract \b0  \tab pagenum\par
+\b screenInitial.ScreenInitial \b0  \tab pagenum\par
+\b screenMenu.ScreenMenu \b0  \tab pagenum\par
+\b screenRegister.ScreenRegister \b0  \tab pagenum\par
+\b screenTelas.ScreenTelas \b0  \tab pagenum\par
+\b screenTransfer.ScreenTransfer \b0  \tab pagenum\par
+\b screenWithdraw.ScreenWithdraw \b0  \tab pagenum\par
+\par
+
+\pard\fs24\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\b\f0\fs36\'cdndice dos Arquivos\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\fs28 Lista de Arquivos\par
+
+\pard\kerning0\b0\f1\fs22 Esta \'e9 a lista de todos os arquivos e suas respectivas descri\'e7\'f5es:\fs24\par
+
+\pard\widctlpar\li360\sb27\sa27\tqr\tldot\tx8640\b\fs20 E:/2020.2 quarentena/github/Projeto_PooII/cliente/clientHost.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenBalance.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenDeposit.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenExtract.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenInitial.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenMain.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenMenu.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenRegister.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenTelas.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenTransfer.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenWithdraw.py \b0  \tab pagenum\par
+\b E:/2020.2 quarentena/github/Projeto_PooII/cliente/testpoo.py \b0  \tab pagenum\par
+\par
+
+\pard\fs24\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\b\f0\fs36 <em>Namespace</em>\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\fs28 Ref\'eancia do Namespace clientHost\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ClientHost\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 string \b host\b0  = 'localhost'\par
+{\pntext\f1 1)\tab}int \b port\b0  = 8000\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Descri\'e7\'e3o detalhada\par
+
+\pard\widctlpar\sb30\sa60\qj\b0\f1\fs22\par
+
+\pard\cbpat5\shading1000\widctlpar\f2\fs16 Classe ClientHost: Essa classe \'e9 utilizada a fim de fazer a conex\'e3o do cliente servidor\par
+\par
+Metodos criados\par
+----------------------------------------------------------------\par
+    connectClient:\par
+        utilizado para conectar ao servidor\par
+\par
+    submit:\par
+        utilizado para receber informa\'e7\'f5es do servidor e enviar informa\'e7\'f5es ao servidor\par
+\par
+    close: \par
+        fechar o servidor do cliente\par
+
+\pard\widctlpar\sb30\sa60\qj\f1\fs22  \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 string clientHost.host = 'localhost'\par
+int clientHost.port = 8000\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenBalance\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenBalance\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenBalance\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenBalance.app = QtWidgets.QApplication(sys.argv)\par
+screenBalance.MainWindow = QtWidgets.QMainWindow()\par
+screenBalance.ui = ScreenBalance()\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenDeposit\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenDeposit\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenDeposit\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenDeposit.app = QtWidgets.QApplication(sys.argv)\par
+screenDeposit.MainWindow = QtWidgets.QMainWindow()\par
+screenDeposit.ui = ScreenDeposit()\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenExtract\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenExtract\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenExtract\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenExtract.app = QtWidgets.QApplication(sys.argv)\par
+screenExtract.MainWindow = QtWidgets.QMainWindow()\par
+screenExtract.ui = ScreenExtract()\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenInitial\par
+\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenInitial\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenInitial\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenInitial.app = QtWidgets.QApplication(sys.argv)\par
+screenInitial.MainWindow = QtWidgets.QMainWindow()\par
+screenInitial.ui = ScreenInitial()\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenMain\par
+\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b Main\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b show_main\b0  = \b Main\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Descri\'e7\'e3o detalhada\par
+
+\pard\widctlpar\sb30\sa60\qj\b0\f1\fs22\par
+\f2\fs16 Classe Main, utilizado a fim de receber e enviar dados para o servidor\f1\fs22  \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenMain.app = QApplication(sys.argv)\par
+screenMain.show_main = Main()\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenMenu\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenMenu\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenMenu\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenMenu.app = QtWidgets.QApplication(sys.argv)\par
+screenMenu.MainWindow = QtWidgets.QMainWindow()\par
+screenMenu.ui = ScreenMenu()\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenRegister\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenRegister\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenRegister\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenRegister.app = QtWidgets.QApplication(sys.argv)\par
+screenRegister.MainWindow = QtWidgets.QMainWindow()\par
+screenRegister.ui = ScreenRegister()\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenTelas\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenTelas\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Descri\'e7\'e3o detalhada\par
+
+\pard\widctlpar\sb30\sa60\qj\b0\f1\fs22\par
+
+\pard\cbpat5\shading1000\widctlpar\f2\fs16 Classe ScreenTelas, criada para chamar todas as telas. e configurar\par
+
+\pard\widctlpar\sb30\sa60\qj o layout\f1\fs22  \par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenTransfer\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenTransfer\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenTransfer\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenTransfer.app = QtWidgets.QApplication(sys.argv)\par
+screenTransfer.MainWindow = QtWidgets.QMainWindow()\par
+screenTransfer.ui = ScreenTransfer()\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace screenWithdraw\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b ScreenWithdraw\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b mainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b ui\b0  = \b ScreenWithdraw\b0 ()\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Vari\'e1veis\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenWithdraw.app = QtWidgets.QApplication(sys.argv)\par
+screenWithdraw.mainWindow = QtWidgets.QMainWindow()\par
+screenWithdraw.ui = ScreenWithdraw()\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Ref\'eancia do Namespace testpoo\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\fs36 Classes\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\fs28 Refer\'eancia da Classe clientHost.ClientHost\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para clientHost.ClientHost:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b __init__\b0  (self)\par
+{\pntext\f1 1)\tab}def \b connectClient\b0  (self)\par
+{\pntext\f1 2)\tab}def \b submit\b0  (self, str push)\par
+{\pntext\f1 3)\tab}def \b close\b0  (self)\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 addr\b0\par
+{\pntext\f1 1)\tab}\b clientSocket\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Construtores e Destrutores\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def clientHost.ClientHost.__init__ (  \i self\i0 )\par
+      \b0\f2\fs16 24     \cf1 def \cf0 __init__(self):\par
+
+\pard\cbpat5\shading1000\widctlpar\li360 25         self.addr = \cf2 None\cf0\par
+26         self.clientSocket = \cf2 None\cf0\par
+27 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def clientHost.ClientHost.close (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16         DESCRIPTION:\par
+
+\pard\widctlpar\li360\sb30\sa60\qj             fechar o servidor do cliente\f1\fs22  \par
+
+\pard\cbpat5\shading1000\widctlpar\li360\f2\fs16 46     \cf1 def \cf0 close(self):\par
+47         \cf3 '''\cf0\par
+48 \cf3         DESCRIPTION:\cf0\par
+49 \cf3             fechar o servidor do cliente\cf0\par
+50 \cf3         '''\cf0\par
+51         self.clientSocket.close()\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def clientHost.ClientHost.connectClient (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16         DESCRIPTION:\par
+
+\pard\widctlpar\li360\sb30\sa60\qj             utilizado para conectar ao servidor\f1\fs22  \par
+
+\pard\cbpat5\shading1000\widctlpar\li360\f2\fs16 28     \cf1 def \cf0 connectClient(self):    \par
+29         \cf3 '''\cf0\par
+30 \cf3         DESCRIPTION:\cf0\par
+31 \cf3             utilizado para conectar ao servidor\cf0\par
+32 \cf3         '''\cf0\par
+33         self.addr = ((host, port))  \cf4 # define a tupla de endereco\cf0\par
+34         self.clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) \cf4 # AF_INET parametro para informar a familia do protocolo, SOCK_STREAM indica que eh TCP/IP\cf0\par
+35         self.clientSocket.connect(self.addr)\par
+36         \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def clientHost.ClientHost.submit (  \i self\i0 , str  \i push\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16         DESCRIPTION:\par
+
+\pard\widctlpar\li360\sb30\sa60\qj             utilizado para receber informa\'e7\'f5es do servidor e enviar informa\'e7\'f5es ao servidor\f1\fs22  \par
+
+\pard\cbpat5\shading1000\widctlpar\li360\f2\fs16 37     \cf1 def \cf0 submit(self, push: str):\par
+38         \cf3 '''\cf0\par
+39 \cf3         DESCRIPTION:\cf0\par
+40 \cf3             utilizado para receber informa\'e7\'f5es do servidor e enviar informa\'e7\'f5es ao servidor\cf0\par
+41 \cf3         '''\cf0\par
+42         self.clientSocket.send(push.encode())\par
+43         push = self.clientSocket.recv(1024).decode()\par
+44         \cf1 return\cf0  push\par
+45     \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 clientHost.ClientHost.addr\par
+clientHost.ClientHost.clientSocket\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b clientHost.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenMain.Main\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenMain.Main:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b __init__\b0  (self, parent=None)\par
+{\pntext\f1 1)\tab}def \b buttonLogin\b0  (self)\par
+{\pntext\f1 2)\tab}def \b openScreenRegister\b0  (self)\par
+{\pntext\f1 3)\tab}def \b exitApp\b0  (self)\par
+{\pntext\f1 4)\tab}def \b buttonRegister\b0  (self)\par
+{\pntext\f1 5)\tab}def \b menu\b0  (self)\par
+{\pntext\f1 6)\tab}def \b menuWithdraw\b0  (self)\par
+{\pntext\f1 7)\tab}def \b menuDeposit\b0  (self)\par
+{\pntext\f1 8)\tab}def \b menuTransfer\b0  (self)\par
+{\pntext\f1 9)\tab}def \b menuExtract\b0  (self)\par
+{\pntext\f1 10)\tab}def \b withdraw\b0  (self)\par
+{\pntext\f1 11)\tab}def \b deposit\b0  (self)\par
+{\pntext\f1 12)\tab}def \b transfer\b0  (self)\par
+{\pntext\f1 13)\tab}def \b comeBackLogin\b0  (self)\par
+{\pntext\f1 14)\tab}def \b comeBack\b0  (self)\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 cpf\b0\par
+{\pntext\f1 1)\tab}\b number\b0\par
+{\pntext\f1 2)\tab}\b clientHost\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Construtores e Destrutores\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenMain.Main.__init__ (  \i self\i0 ,   \i parent\i0  = \f2 None\f0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 18     \cf1 def \cf0 __init__(self, parent=None):\par
+19         super(Main, self).__init__(parent)\par
+20         \cf3 '''\cf0\par
+21 \cf3         DESCRIPTION:\cf0\par
+22 \cf3             utilizado a fim de receber e enviar dados para o servidor e conectar os bot\'e3o as tela           \cf0\par
+23 \cf3         '''\cf0\par
+24         self.cpf = \cf3 ''\cf0\par
+25         self.number = \cf3 ''\cf0\par
+26         self.setupUI(self)\par
+27         self.clientHost = ClientHost()\par
+28         self.clientHost.connectClient()\par
+29         \par
+30         \cf4 # Tela Inicial\cf0\par
+31         self.screenInitial.pushButtonLogin.clicked.connect(self.buttonLogin) \cf4 # Bot\'e3o da tela inicial\cf0\par
+32         self.screenInitial.pushButtonCreateAccount.clicked.connect(self.openScreenRegister) \cf4 # Bot\'e3o da tela inicial\cf0\par
+33         self.screenInitial.pushButtonExit.clicked.connect(self.exitApp) \cf4 # Bot\'e3o da tela inicial\cf0\par
+34 \par
+35         \cf4 # Tela Registro\cf0\par
+36         self.screenRegister.pushButtonRegister.clicked.connect(self.buttonRegister) \cf4 # Bot\'e3o da tela Registro\cf0\par
+37         self.screenRegister.pushButtonComeBack.clicked.connect(self.comeBackLogin) \cf4 # Bot\'e3o da tela Registro\cf0\par
+38 \par
+39         \cf4 # Tela Menu\cf0\par
+40         self.screenMenu.pushButtonWithdraw.clicked.connect(self.menuWithdraw) \cf4 # Bot\'e3o da tela Menu\cf0\par
+41         self.screenMenu.pushButtonDeposit.clicked.connect(self.menuDeposit) \cf4 # Bot\'e3o da tela Menu\cf0\par
+42         self.screenMenu.pushButtonTransfer.clicked.connect(self.menuTransfer) \cf4 # Bot\'e3o da tela Menu\cf0\par
+43         self.screenMenu.pushButtonExtract.clicked.connect(self.menuExtract) \cf4 # Bot\'e3o da tela Menu\cf0\par
+44         self.screenMenu.pushButtonExit.clicked.connect(self.comeBackLogin) \cf4 # Bot\'e3o da tela Menu\cf0\par
+45 \par
+46         \cf4 # Tela saque\cf0\par
+47         self.screenWithdraw.pushButtonWithdrawWithdraw.clicked.connect(self.withdraw) \cf4 # Bot\'e3o da tela saque\cf0\par
+48         self.screenWithdraw.pushButtonComeBack.clicked.connect(self.comeBack) \cf4 # Bot\'e3o da tela saque\cf0\par
+49 \par
+50         \cf4 # Tela deposito\cf0\par
+51         self.screenDeposit.pushButtonDepositDeposit.clicked.connect(self.deposit) \cf4 # Bot\'e3o da tela deposito\cf0\par
+52         self.screenDeposit.pushButtonComeBack.clicked.connect(self.comeBack) \cf4 # Bot\'e3o da tela deposito\cf0\par
+53 \par
+54         \cf4 # Tela tranferencia\cf0\par
+55         self.screenTransfer.pushButtonTransferTransfer.clicked.connect(self.transfer) \cf4 # Bot\'e3o da tela tranferencia\cf0\par
+56         self.screenTransfer.pushButtonComeBack.clicked.connect(self.comeBack) \cf4 # Bot\'e3o da tela tranferencia\cf0\par
+57 \par
+58         \cf4 # Tela Extrato\cf0\par
+59         self.screenExtract.pushButtonComeBack.clicked.connect(self.comeBack) \cf4 # Bot\'e3o da tela extrato\cf0\par
+60 \par
+61     \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenMain.Main.buttonLogin (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 62     \cf1 def \cf0 buttonLogin(self): \cf4 #   Tela Inicial\cf0\par
+63         cpf = self.screenInitial.lineEditLoginCPF.text()\par
+64         password = self.screenInitial.lineEditLoginPassword.text()\par
+65         \cf1 if\cf0  \cf1 not\cf0  (cpf == \cf3 ''\cf0  \cf1 or\cf0  password == \cf3 ''\cf0 ):\par
+66             push = \cf3 '\{\}\'cf\'80\'e2\'88\'9b\{\}\'cf\'80\'e2\'88\'9b\{\}'\cf0 .format(\cf3 'authenticated'\cf0 , cpf, password)  \cf4 # enviar\cf0\par
+67             pull = self.clientHost.submit(push)  \cf4 # receber\cf0\par
+68             \cf1 if\cf0  pull == \cf3 'True'\cf0 :\par
+69                 self.cpf = cpf\par
+70                 QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'Login realizado com sucesso!'\cf0 )\par
+71                 self.screenInitial.lineEditLoginCPF.setText(\cf3 ''\cf0 )\par
+72                 self.screenInitial.lineEditLoginPassword.setText(\cf3 ''\cf0 )\par
+73                 self.screenMenu.lineEditMenuBalance.setText(\cf3 'saldo'\cf0 )\par
+74                 self.screenMenu.lineEditMenuName.setText(\cf3 'nome'\cf0 )\par
+75                 self.menu()\par
+76                 self.QtStack.setCurrentIndex(2)\par
+77         \cf1 else\cf0 :\par
+78             QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'Todos os valores devem ser preenchidos!'\cf0 )\par
+79 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.buttonRegister (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 96     \cf1 def \cf0 buttonRegister(self): \cf4 # Tela de Registro\cf0\par
+97         name = self.screenRegister.lineEditRegisterName.text()\par
+98         surname = self.screenRegister.lineEditRegisterSurname.text()\par
+99         cpf = self.screenRegister.lineEditRegisterCPF.text()\par
+100         number = self.screenRegister.lineEditRegisterAccountNumber.text()\par
+101         value = self.screenRegister.lineEditRegisterAccountBalance.text()\par
+102         password = self.screenRegister.lineEditRegisterAccountPassword.text()\par
+103         \par
+104         \cf1 if\cf0  \cf1 not\cf0  (name == \cf3 ''\cf0  \cf1 or\cf0  surname == \cf3 ''\cf0  \cf1 or\cf0  cpf == \cf3 ''\cf0  \cf1 or\cf0  number == \cf3 ''\cf0  \cf1 or\cf0  value == \cf3 ''\cf0  \cf1 or\cf0  password == \cf3 ''\cf0 ):\par
+105             push = \cf3 '\{\}\'cf\'80\'e2\'88\'9b\{\}\'cf\'80\'e2\'88\'9b\{\}\'cf\'80\'e2\'88\'9b\{\}\'cf\'80\'e2\'88\'9b\{\}\'cf\'80\'e2\'88\'9b\{\}\'cf\'80\'e2\'88\'9b\{\}'\cf0 .format(\cf3 'add_client'\cf0 , name, surname, cpf, number, value, password)\par
+106             pull = self.clientHost.submit(push)\par
+107             \cf1 if\cf0  pull == \cf3 'True'\cf0 :\par
+108                 QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'Cadastro realizado com sucesso!'\cf0 )\par
+109                 self.screenRegister.lineEditRegisterName.setText(\cf3 ''\cf0 )\par
+110                 self.screenRegister.lineEditRegisterSurname.setText(\cf3 ''\cf0 )\par
+111                 self.screenRegister.lineEditRegisterCPF.setText(\cf3 ''\cf0 )\par
+112                 self.screenRegister.lineEditRegisterAccountNumber.setText(\cf3 ''\cf0 )\par
+113                 self.screenRegister.lineEditRegisterAccountBalance.setText(\cf3 ''\cf0 )\par
+114                 self.screenRegister.lineEditRegisterAccountPassword.setText(\cf3 ''\cf0 )\par
+115                 self.QtStack.setCurrentIndex(0)\par
+116 \par
+117             \cf1 elif\cf0  pull == \cf3 'False1'\cf0 :\par
+118                 QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'N\'famero de Conta Em Uso!'\cf0 )\par
+119 \par
+120             \cf1 elif\cf0  pull == \cf3 'False2'\cf0 :\par
+121                 QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'CPF Em Uso!'\cf0 )\par
+122         \cf1 else\cf0 :\par
+123             QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'Todos os valores devem ser preenchidos!'\cf0 )\par
+124 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.comeBack (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 198     \cf1 def \cf0 comeBack(self): \cf4 #   Botao para voltar a tela principal\cf0\par
+199         self.QtStack.setCurrentIndex(2)\par
+200 \par
+201 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.comeBackLogin (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 193     \cf1 def \cf0 comeBackLogin(self): \cf4 # Botao para voltar a tela de login\cf0\par
+194         self.screenInitial.lineEditLoginCPF.setText(\cf3 ''\cf0 )\par
+195         self.screenInitial.lineEditLoginPassword.setText(\cf3 ''\cf0 )\par
+196         self.QtStack.setCurrentIndex(0)\par
+197 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.deposit (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 165     \cf1 def \cf0 deposit(self): \cf4 # Tela Deposito\cf0\par
+166         value = self.screenDeposit.lineEditDepositValue.text()\par
+167         \cf1 if\cf0  \cf1 not\cf0  (value == \cf3 ''\cf0 ):\par
+168             push = \cf3 '\{\}\'cf\'80\'e2\'88\'9b\{\}'\cf0 .format(\cf3 'deposit'\cf0 , value)\par
+169             pull = self.clientHost.submit(push)\par
+170             \cf1 if\cf0  pull == \cf3 'True'\cf0 :\par
+171                 self.screenDeposit.lineEditDepositValue.setText(\cf3 ''\cf0 )\par
+172                 QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , value)\par
+173                 self.menu()\par
+174                 self.QtStack.setCurrentIndex(2)\par
+175         \cf1 else\cf0 :\par
+176             QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 "Valor invalido"\cf0 )\par
+177 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.exitApp (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 91     \cf1 def \cf0 exitApp(self):  \cf4 #   saida da aplica\'e7\'e3o  \cf0\par
+92         \cf4 # client_socket.close()\cf0\par
+93         QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'Programa Finalizado'\cf0 )\par
+94         sys.exit(app.exec_())\par
+95 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.menu (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 125     \cf1 def \cf0 menu(self): \cf4 # Tela Menu\cf0\par
+126         push = \cf3 '\{\}'\cf0 .format(\cf3 'menuName'\cf0 )\par
+127         pull = self.clientHost.submit(push)\par
+128         self.screenMenu.lineEditMenuName.setText(pull)\par
+129         push = \cf3 '\{\}'\cf0 .format(\cf3 'menuBalance'\cf0 )\par
+130         pull = self.clientHost.submit(push)\par
+131         self.screenMenu.lineEditMenuBalance.setText(pull)\par
+132 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.menuDeposit (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 137     \cf1 def \cf0 menuDeposit(self): \cf4 #    chama a tela de deposito\cf0\par
+138         self.screenDeposit.lineEditDepositValue.setText(\cf3 ''\cf0 )\par
+139         self.QtStack.setCurrentIndex(4)\par
+140     \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.menuExtract (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 146     \cf1 def \cf0 menuExtract(self): \cf4 #    onde \'e9 mostrado o extrato do cliente\cf0\par
+147         push = \cf3 '\{\}'\cf0 .format(\cf3 'extract'\cf0 )\par
+148         pull = self.clientHost.submit(push)\par
+149         self.screenExtract.plainTextEdit.setPlainText(pull)\par
+150         self.QtStack.setCurrentIndex(6)\par
+151 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.menuTransfer (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 141     \cf1 def \cf0 menuTransfer(self): \cf4 #   chama a tela de transferencia\cf0\par
+142         self.screenTransfer.lineEditTransferAccountNumber.setText(\cf3 ''\cf0 )\par
+143         self.screenTransfer.lineEditTransferValue.setText(\cf3 ''\cf0 )\par
+144         self.QtStack.setCurrentIndex(5)\par
+145 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.menuWithdraw (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 133     \cf1 def \cf0 menuWithdraw(self): \cf4 #   chama a tela de saque\cf0\par
+134         self.screenWithdraw.lineEditWithdrawValue.setText(\cf3 ''\cf0 )\par
+135         self.QtStack.setCurrentIndex(3)\par
+136 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.openScreenRegister (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 80     \cf1 def \cf0 openScreenRegister(self): \cf4 # chama a tela de registro do cliente\cf0\par
+81         \cf4 # N\'e3o mostrar nenhum campo preenchidos\cf0\par
+82         self.screenRegister.lineEditRegisterName.setText(\cf3 ''\cf0 )\par
+83         self.screenRegister.lineEditRegisterSurname.setText(\cf3 ''\cf0 )\par
+84         self.screenRegister.lineEditRegisterCPF.setText(\cf3 ''\cf0 )\par
+85         self.screenRegister.lineEditRegisterAccountNumber.setText(\cf3 ''\cf0 )\par
+86         self.screenRegister.lineEditRegisterAccountBalance.setText(\cf3 ''\cf0 )\par
+87         self.screenRegister.lineEditRegisterAccountPassword.setText(\cf3 ''\cf0 )\par
+88         self.QtStack.setCurrentIndex(1)\par
+89 \par
+90     \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.transfer (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 178     \cf1 def \cf0 transfer(self): \cf4 # Tela Tranfer\'eancia\cf0\par
+179         number = self.screenTransfer.lineEditTransferAccountNumber.text()\par
+180         value = self.screenTransfer.lineEditTransferValue.text()\par
+181         push = \cf3 '\{\}\'cf\'80\'e2\'88\'9b\{\}\'cf\'80\'e2\'88\'9b\{\}'\cf0 .format(\cf3 'transfer'\cf0 , number, value)\par
+182         pull = self.clientHost.submit(push)\par
+183         \cf1 if\cf0  pull == \cf3 'True'\cf0 :\par
+184             QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'Transfer\'eancia Realizada Com Sucesso!'\cf0 )\par
+185             self.screenTransfer.lineEditTransferAccountNumber.setText(\cf3 ''\cf0 )\par
+186             self.screenTransfer.lineEditTransferValue.setText(\cf3 ''\cf0 )\par
+187             self.menu()\par
+188             self.QtStack.setCurrentIndex(2)\par
+189         \cf1 elif\cf0  pull == \cf3 'False'\cf0 :\par
+190             QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 'N\'famero de Conta N\'e3o Encontrado'\cf0 )\par
+191             self.screenTransfer.lineEditTransferAccountNumber.setText(\cf3 ''\cf0 )\par
+192 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMain.Main.withdraw (  \i self\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 152     \cf1 def \cf0 withdraw(self): \cf4 # Tela Saque\cf0\par
+153         value = self.screenWithdraw.lineEditWithdrawValue.text()\par
+154         \cf1 if\cf0  not(value == \cf3 ''\cf0 ):\par
+155             push = \cf3 '\{\}\'cf\'80\'e2\'88\'9b\{\}'\cf0 .format(\cf3 'withdraw'\cf0 , value)\par
+156             pull = self.clientHost.submit(push)\par
+157             \cf1 if\cf0  pull == \cf3 'True'\cf0 :\par
+158                 self.screenWithdraw.lineEditWithdrawValue.setText(\cf3 ''\cf0 )\par
+159                 QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , value)\par
+160                 self.menu()\par
+161                 self.QtStack.setCurrentIndex(2)\par
+162             \cf1 else\cf0 :\par
+163                 QMessageBox.information(\cf2 None\cf0 , \cf3 'Evollutte Bank'\cf0 , \cf3 "Valor invalido"\cf0 )\par
+164 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenMain.Main.clientHost\par
+screenMain.Main.cpf\par
+screenMain.Main.number\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenMain.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenBalance.ScreenBalance\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenBalance.ScreenBalance:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b MainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b MainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label\b0\par
+{\pntext\f1 3)\tab}\b frame_2\b0\par
+{\pntext\f1 4)\tab}\b lineEditBalanceValue\b0\par
+{\pntext\f1 5)\tab}\b pushButtonComeBack\b0\par
+{\pntext\f1 6)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenBalance.ScreenBalance.retranslateUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 112     \cf1 def \cf0 retranslateUi(self, MainWindow):\par
+113         _translate = QtCore.QCoreApplication.translate\par
+114         MainWindow.setWindowTitle(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Saldo"\cf0 ))\par
+115         self.label.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+116         self.lineEditBalanceValue.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Saldo"\cf0 ))\par
+117         self.pushButtonComeBack.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Voltar"\cf0 ))\par
+118 \par
+119 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenBalance.ScreenBalance.setupUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, MainWindow):\par
+16         MainWindow.setObjectName(\cf3 "MainWindow"\cf0 )\par
+17         MainWindow.resize(800, 600)\par
+18         MainWindow.setMinimumSize(QtCore.QSize(800, 600))\par
+19         MainWindow.setMaximumSize(QtCore.QSize(800, 600))\par
+20         icon = QtGui.QIcon()\par
+21         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+22         MainWindow.setWindowIcon(icon)\par
+23         self.centralwidget = QtWidgets.QWidget(MainWindow)\par
+24         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+25         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+26         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 80))\par
+27         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);"\cf0 )\par
+28         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+29         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+30         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+31         self.label = QtWidgets.QLabel(self.frame)\par
+32         self.label.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+33         font = QtGui.QFont()\par
+34         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+35         font.setPointSize(28)\par
+36         font.setBold(\cf1 True\cf0 )\par
+37         font.setWeight(75)\par
+38         self.label.setFont(font)\par
+39         self.label.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+40         self.label.setObjectName(\cf3 "label"\cf0 )\par
+41         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+42         self.frame_2.setGeometry(QtCore.QRect(0, 80, 800, 600))\par
+43         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)\par
+44         sizePolicy.setHorizontalStretch(0)\par
+45         sizePolicy.setVerticalStretch(0)\par
+46         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())\par
+47         self.frame_2.setSizePolicy(sizePolicy)\par
+48         self.frame_2.setMinimumSize(QtCore.QSize(800, 600))\par
+49         self.frame_2.setMaximumSize(QtCore.QSize(800, 600))\par
+50         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+51         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+52         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+53         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+54         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+55         self.lineEditBalanceValue = QtWidgets.QLineEdit(self.frame_2)\par
+56         self.lineEditBalanceValue.setEnabled(\cf1 False\cf0 )\par
+57         self.lineEditBalanceValue.setGeometry(QtCore.QRect(270, 120, 260, 42))\par
+58         font = QtGui.QFont()\par
+59         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+60         font.setPointSize(16)\par
+61         font.setBold(\cf1 True\cf0 )\par
+62         font.setWeight(75)\par
+63         self.lineEditBalanceValue.setFont(font)\par
+64         self.lineEditBalanceValue.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+65         self.lineEditBalanceValue.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+66 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+67 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+68 \cf3 "    border: 0;\\n"\cf0\par
+69 \cf3 "    border-radius: 5px;\\n"\cf0\par
+70 \cf3 "\}\\n"\cf0\par
+71 \cf3 "\\n"\cf0\par
+72 \cf3 ""\cf0 )\par
+73         self.lineEditBalanceValue.setInputMethodHints(QtCore.Qt.ImhNoEditMenu)\par
+74         self.lineEditBalanceValue.setMaxLength(10)\par
+75         self.lineEditBalanceValue.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+76         self.lineEditBalanceValue.setDragEnabled(\cf1 False\cf0 )\par
+77         self.lineEditBalanceValue.setReadOnly(\cf1 True\cf0 )\par
+78         self.lineEditBalanceValue.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+79         self.lineEditBalanceValue.setClearButtonEnabled(\cf1 False\cf0 )\par
+80         self.lineEditBalanceValue.setObjectName(\cf3 "lineEditBalanceValue"\cf0 )\par
+81         self.pushButtonComeBack = QtWidgets.QPushButton(self.frame_2)\par
+82         self.pushButtonComeBack.setGeometry(QtCore.QRect(345, 410, 110, 30))\par
+83         font = QtGui.QFont()\par
+84         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+85         font.setPointSize(10)\par
+86         font.setBold(\cf1 True\cf0 )\par
+87         font.setWeight(75)\par
+88         self.pushButtonComeBack.setFont(font)\par
+89         self.pushButtonComeBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+90         self.pushButtonComeBack.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+91 \cf3 "    color: rgb(0, 55, 104);\\n"\cf0\par
+92 \cf3 "    border: 0;\\n"\cf0\par
+93 \cf3 "    border-radius: 5px;\\n"\cf0\par
+94 \cf3 "\}\\n"\cf0\par
+95 \cf3 "\\n"\cf0\par
+96 \cf3 "QPushButton:hover \{\\n"\cf0\par
+97 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+98 \cf3 "\}\\n"\cf0\par
+99 \cf3 "\\n"\cf0\par
+100 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+101 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+102 \cf3 "\}"\cf0 )\par
+103         self.pushButtonComeBack.setObjectName(\cf3 "pushButtonComeBack"\cf0 )\par
+104         MainWindow.setCentralWidget(self.centralwidget)\par
+105         self.statusbar = QtWidgets.QStatusBar(MainWindow)\par
+106         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+107         MainWindow.setStatusBar(self.statusbar)\par
+108 \par
+109         self.retranslateUi(MainWindow)\par
+110         QtCore.QMetaObject.connectSlotsByName(MainWindow)\par
+111 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenBalance.ScreenBalance.centralwidget\par
+screenBalance.ScreenBalance.frame\par
+screenBalance.ScreenBalance.frame_2\par
+screenBalance.ScreenBalance.label\par
+screenBalance.ScreenBalance.lineEditBalanceValue\par
+screenBalance.ScreenBalance.pushButtonComeBack\par
+screenBalance.ScreenBalance.statusbar\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenBalance.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenDeposit.ScreenDeposit\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenDeposit.ScreenDeposit:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b MainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b MainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label_2\b0\par
+{\pntext\f1 3)\tab}\b frame_2\b0\par
+{\pntext\f1 4)\tab}\b pushButtonDepositDeposit\b0\par
+{\pntext\f1 5)\tab}\b lineEditDepositValue\b0\par
+{\pntext\f1 6)\tab}\b pushButtonComeBack\b0\par
+{\pntext\f1 7)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenDeposit.ScreenDeposit.retranslateUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 135     \cf1 def \cf0 retranslateUi(self, MainWindow):\par
+136         _translate = QtCore.QCoreApplication.translate\par
+137         MainWindow.setWindowTitle(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Deposito"\cf0 ))\par
+138         self.label_2.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+139         self.pushButtonDepositDeposit.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Depositar"\cf0 ))\par
+140         self.lineEditDepositValue.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Valor"\cf0 ))\par
+141         self.pushButtonComeBack.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Voltar"\cf0 ))\par
+142 \par
+143 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenDeposit.ScreenDeposit.setupUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+      \b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, MainWindow):\par
+
+\pard\cbpat5\shading1000\widctlpar\li360 16         MainWindow.setObjectName(\cf3 "MainWindow"\cf0 )\par
+17         MainWindow.resize(800, 600)\par
+18         MainWindow.setMinimumSize(QtCore.QSize(800, 600))\par
+19         MainWindow.setMaximumSize(QtCore.QSize(800, 600))\par
+20         icon = QtGui.QIcon()\par
+21         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+22         MainWindow.setWindowIcon(icon)\par
+23         self.centralwidget = QtWidgets.QWidget(MainWindow)\par
+24         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+25         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+26         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 80))\par
+27         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);"\cf0 )\par
+28         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+29         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+30         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+31         self.label_2 = QtWidgets.QLabel(self.frame)\par
+32         self.label_2.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+33         font = QtGui.QFont()\par
+34         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+35         font.setPointSize(28)\par
+36         font.setBold(\cf1 True\cf0 )\par
+37         font.setWeight(75)\par
+38         self.label_2.setFont(font)\par
+39         self.label_2.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+40         self.label_2.setObjectName(\cf3 "label_2"\cf0 )\par
+41         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+42         self.frame_2.setGeometry(QtCore.QRect(0, 80, 800, 600))\par
+43         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)\par
+44         sizePolicy.setHorizontalStretch(0)\par
+45         sizePolicy.setVerticalStretch(0)\par
+46         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())\par
+47         self.frame_2.setSizePolicy(sizePolicy)\par
+48         self.frame_2.setMinimumSize(QtCore.QSize(800, 600))\par
+49         self.frame_2.setMaximumSize(QtCore.QSize(800, 600))\par
+50         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+51         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+52         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+53         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+54         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+55         self.pushButtonDepositDeposit = QtWidgets.QPushButton(self.frame_2)\par
+56         self.pushButtonDepositDeposit.setGeometry(QtCore.QRect(340, 200, 120, 36))\par
+57         font = QtGui.QFont()\par
+58         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+59         font.setPointSize(14)\par
+60         font.setBold(\cf1 True\cf0 )\par
+61         font.setWeight(75)\par
+62         self.pushButtonDepositDeposit.setFont(font)\par
+63         self.pushButtonDepositDeposit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+64         self.pushButtonDepositDeposit.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+65 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+66 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+67 \cf3 "    border: 0;\\n"\cf0\par
+68 \cf3 "    border-radius: 5px;\\n"\cf0\par
+69 \cf3 "\}\\n"\cf0\par
+70 \cf3 "\\n"\cf0\par
+71 \cf3 "QPushButton:hover \{\\n"\cf0\par
+72 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+73 \cf3 "\}\\n"\cf0\par
+74 \cf3 "\\n"\cf0\par
+75 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+76 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+77 \cf3 "\}"\cf0 )\par
+78         self.pushButtonDepositDeposit.setObjectName(\cf3 "pushButtonDepositDeposit"\cf0 )\par
+79         self.lineEditDepositValue = QtWidgets.QLineEdit(self.frame_2)\par
+80         self.lineEditDepositValue.setGeometry(QtCore.QRect(270, 120, 260, 42))\par
+81         font = QtGui.QFont()\par
+82         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+83         font.setPointSize(16)\par
+84         font.setBold(\cf1 True\cf0 )\par
+85         font.setWeight(75)\par
+86         self.lineEditDepositValue.setFont(font)\par
+87         self.lineEditDepositValue.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+88         self.lineEditDepositValue.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+89 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+90 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+91 \cf3 "    border: 0;\\n"\cf0\par
+92 \cf3 "    border-radius: 5px;\\n"\cf0\par
+93 \cf3 "\}\\n"\cf0\par
+94 \cf3 "\\n"\cf0\par
+95 \cf3 ""\cf0 )\par
+96         self.lineEditDepositValue.setMaxLength(10)\par
+97         self.lineEditDepositValue.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+98         self.lineEditDepositValue.setDragEnabled(\cf1 False\cf0 )\par
+99         self.lineEditDepositValue.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+100         self.lineEditDepositValue.setClearButtonEnabled(\cf1 False\cf0 )\par
+101         self.lineEditDepositValue.setObjectName(\cf3 "lineEditDepositValue"\cf0 )\par
+102         self.pushButtonComeBack = QtWidgets.QPushButton(self.frame_2)\par
+103         self.pushButtonComeBack.setGeometry(QtCore.QRect(345, 410, 110, 30))\par
+104         font = QtGui.QFont()\par
+105         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+106         font.setPointSize(10)\par
+107         font.setBold(\cf1 True\cf0 )\par
+108         font.setWeight(75)\par
+109         self.pushButtonComeBack.setFont(font)\par
+110         self.pushButtonComeBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+111         self.pushButtonComeBack.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+112 \cf3 "    color: rgb(0, 55, 104);\\n"\cf0\par
+113 \cf3 "    border: 0;\\n"\cf0\par
+114 \cf3 "    border-radius: 5px;\\n"\cf0\par
+115 \cf3 "\}\\n"\cf0\par
+116 \cf3 "\\n"\cf0\par
+117 \cf3 "QPushButton:hover \{\\n"\cf0\par
+118 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+119 \cf3 "\}\\n"\cf0\par
+120 \cf3 "\\n"\cf0\par
+121 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+122 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+123 \cf3 "\}"\cf0 )\par
+124         self.pushButtonComeBack.setObjectName(\cf3 "pushButtonComeBack"\cf0 )\par
+125         MainWindow.setCentralWidget(self.centralwidget)\par
+126         self.statusbar = QtWidgets.QStatusBar(MainWindow)\par
+127         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+128         MainWindow.setStatusBar(self.statusbar)\par
+129 \par
+130         self.retranslateUi(MainWindow)\par
+131         QtCore.QMetaObject.connectSlotsByName(MainWindow)\par
+132         MainWindow.setTabOrder(self.lineEditDepositValue, self.pushButtonDepositDeposit)\par
+133         MainWindow.setTabOrder(self.pushButtonDepositDeposit, self.pushButtonComeBack)\par
+134 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenDeposit.ScreenDeposit.centralwidget\par
+screenDeposit.ScreenDeposit.frame\par
+SscreenDeposit.ScreenDeposit.frame_2\par
+screenDeposit.ScreenDeposit.label_2\par
+screenDeposit.ScreenDeposit.lineEditDepositValue\par
+screenDeposit.ScreenDeposit.pushButtonComeBack\par
+screenDeposit.ScreenDeposit.pushButtonDepositDeposit\par
+screenDeposit.ScreenDeposit.statusbar\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60 A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenDeposit.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenExtract.ScreenExtract\par
+\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenExtract.ScreenExtract:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b MainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b MainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label_2\b0\par
+{\pntext\f1 3)\tab}\b frame_2\b0\par
+{\pntext\f1 4)\tab}\b pushButtonComeBack\b0\par
+{\pntext\f1 5)\tab}\b plainTextEdit\b0\par
+{\pntext\f1 6)\tab}\b label\b0\par
+{\pntext\f1 7)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenExtract.ScreenExtract.retranslateUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 116     \cf1 def \cf0 retranslateUi(self, MainWindow):\par
+117         _translate = QtCore.QCoreApplication.translate\par
+118         MainWindow.setWindowTitle(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Hist\'f3rico"\cf0 ))\par
+119         self.label_2.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+120         self.pushButtonComeBack.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Voltar"\cf0 ))\par
+121         self.label.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Extrato"\cf0 ))\par
+122 \par
+123 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenExtract.ScreenExtract.setupUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, MainWindow):\par
+16         MainWindow.setObjectName(\cf3 "MainWindow"\cf0 )\par
+17         MainWindow.resize(800, 600)\par
+18         MainWindow.setMinimumSize(QtCore.QSize(800, 600))\par
+19         MainWindow.setMaximumSize(QtCore.QSize(800, 600))\par
+20         icon = QtGui.QIcon()\par
+21         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+22         MainWindow.setWindowIcon(icon)\par
+23         self.centralwidget = QtWidgets.QWidget(MainWindow)\par
+24         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+25         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+26         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 80))\par
+27         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);"\cf0 )\par
+28         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+29         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+30         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+31         self.label_2 = QtWidgets.QLabel(self.frame)\par
+32         self.label_2.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+33         font = QtGui.QFont()\par
+34         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+35         font.setPointSize(28)\par
+36         font.setBold(\cf1 True\cf0 )\par
+37         font.setWeight(75)\par
+38         self.label_2.setFont(font)\par
+39         self.label_2.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+40         self.label_2.setObjectName(\cf3 "label_2"\cf0 )\par
+41         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+42         self.frame_2.setGeometry(QtCore.QRect(0, 80, 800, 600))\par
+43         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)\par
+44         sizePolicy.setHorizontalStretch(0)\par
+45         sizePolicy.setVerticalStretch(0)\par
+46         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())\par
+47         self.frame_2.setSizePolicy(sizePolicy)\par
+48         self.frame_2.setMinimumSize(QtCore.QSize(800, 600))\par
+49         self.frame_2.setMaximumSize(QtCore.QSize(800, 600))\par
+50         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+51         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+52         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+53         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+54         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+55         self.pushButtonComeBack = QtWidgets.QPushButton(self.frame_2)\par
+56         self.pushButtonComeBack.setGeometry(QtCore.QRect(345, 410, 110, 30))\par
+57         font = QtGui.QFont()\par
+58         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+59         font.setPointSize(10)\par
+60         font.setBold(\cf1 True\cf0 )\par
+61         font.setWeight(75)\par
+62         self.pushButtonComeBack.setFont(font)\par
+63         self.pushButtonComeBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+64         self.pushButtonComeBack.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+65 \cf3 "    color: rgb(0, 55, 104);\\n"\cf0\par
+66 \cf3 "    border: 0;\\n"\cf0\par
+67 \cf3 "    border-radius: 5px;\\n"\cf0\par
+68 \cf3 "\}\\n"\cf0\par
+69 \cf3 "\\n"\cf0\par
+70 \cf3 "QPushButton:hover \{\\n"\cf0\par
+71 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+72 \cf3 "\}\\n"\cf0\par
+73 \cf3 "\\n"\cf0\par
+74 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+75 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+76 \cf3 "\}"\cf0 )\par
+77         self.pushButtonComeBack.setObjectName(\cf3 "pushButtonComeBack"\cf0 )\par
+78         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.frame_2)\par
+79         self.plainTextEdit.setEnabled(\cf1 True\cf0 )\par
+80         self.plainTextEdit.setGeometry(QtCore.QRect(64, 100, 672, 271))\par
+81         font = QtGui.QFont()\par
+82         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+83         font.setPointSize(11)\par
+84         font.setBold(\cf1 True\cf0 )\par
+85         font.setWeight(75)\par
+86         self.plainTextEdit.setFont(font)\par
+87         self.plainTextEdit.setStyleSheet(\cf3 "color: rgb(255, 255, 255);\\n"\cf0\par
+88 \cf3 "background-color: rgb(0, 55, 104);\\n"\cf0\par
+89 \cf3 "border-radius: 5px;"\cf0 )\par
+90         self.plainTextEdit.setMidLineWidth(0)\par
+91         self.plainTextEdit.setReadOnly(\cf1 True\cf0 )\par
+92         self.plainTextEdit.setBackgroundVisible(\cf1 False\cf0 )\par
+93         self.plainTextEdit.setCenterOnScroll(\cf1 False\cf0 )\par
+94         self.plainTextEdit.setObjectName(\cf3 "plainTextEdit"\cf0 )\par
+95         self.label = QtWidgets.QLabel(self.frame_2)\par
+96         self.label.setGeometry(QtCore.QRect(240, 40, 321, 51))\par
+97         font = QtGui.QFont()\par
+98         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+99         font.setPointSize(16)\par
+100         font.setBold(\cf1 True\cf0 )\par
+101         font.setWeight(75)\par
+102         self.label.setFont(font)\par
+103         self.label.setStyleSheet(\cf3 "background-color: rgb(255, 255, 255);\\n"\cf0\par
+104 \cf3 "color: rgb(0, 55, 104);\\n"\cf0\par
+105 \cf3 "border-radius: 5px;"\cf0 )\par
+106         self.label.setAlignment(QtCore.Qt.AlignCenter)\par
+107         self.label.setObjectName(\cf3 "label"\cf0 )\par
+108         MainWindow.setCentralWidget(self.centralwidget)\par
+109         self.statusbar = QtWidgets.QStatusBar(MainWindow)\par
+110         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+111         MainWindow.setStatusBar(self.statusbar)\par
+112 \par
+113         self.retranslateUi(MainWindow)\par
+114         QtCore.QMetaObject.connectSlotsByName(MainWindow)\par
+115 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenExtract.ScreenExtract.centralwidget\par
+screenExtract.ScreenExtract.frame\par
+screenExtract.ScreenExtract.frame_2\par
+screenExtract.ScreenExtract.label\par
+screenExtract.ScreenExtract.label_2\par
+screenExtract.ScreenExtract.plainTextEdit\par
+screenExtract.ScreenExtract.pushButtonComeBack\par
+screenExtract.ScreenExtract.statusbar\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenExtract.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenInitial.ScreenInitial\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenInitial.ScreenInitial:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b MainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b MainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label\b0\par
+{\pntext\f1 3)\tab}\b frame_2\b0\par
+{\pntext\f1 4)\tab}\b lineEditLoginCPF\b0\par
+{\pntext\f1 5)\tab}\b lineEditLoginPassword\b0\par
+{\pntext\f1 6)\tab}\b pushButtonLogin\b0\par
+{\pntext\f1 7)\tab}\b pushButtonCreateAccount\b0\par
+{\pntext\f1 8)\tab}\b pushButtonExit\b0\par
+{\pntext\f1 9)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenInitial.ScreenInitial.retranslateUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 175     \cf1 def \cf0 retranslateUi(self, MainWindow):\par
+176         _translate = QtCore.QCoreApplication.translate\par
+177         MainWindow.setWindowTitle(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollute Bank"\cf0 ))\par
+178         self.label.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+179         self.lineEditLoginCPF.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "CPF"\cf0 ))\par
+180         self.lineEditLoginPassword.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Senha"\cf0 ))\par
+181         self.pushButtonLogin.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Login"\cf0 ))\par
+182         self.pushButtonCreateAccount.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Criar Conta"\cf0 ))\par
+183         self.pushButtonExit.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Sair"\cf0 ))\par
+184 \par
+185 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenInitial.ScreenInitial.setupUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, MainWindow):\par
+16         MainWindow.setObjectName(\cf3 "MainWindow"\cf0 )\par
+17         MainWindow.setEnabled(\cf1 True\cf0 )\par
+18         MainWindow.resize(800, 600)\par
+19         MainWindow.setMinimumSize(QtCore.QSize(800, 600))\par
+20         MainWindow.setMaximumSize(QtCore.QSize(800, 600))\par
+21         MainWindow.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)\par
+22         icon = QtGui.QIcon()\par
+23         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+24         MainWindow.setWindowIcon(icon)\par
+25         self.centralwidget = QtWidgets.QWidget(MainWindow)\par
+26         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+27         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+28         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 80))\par
+29         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);"\cf0 )\par
+30         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+31         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+32         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+33         self.label = QtWidgets.QLabel(self.frame)\par
+34         self.label.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+35         font = QtGui.QFont()\par
+36         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+37         font.setPointSize(28)\par
+38         font.setBold(\cf1 True\cf0 )\par
+39         font.setWeight(75)\par
+40         self.label.setFont(font)\par
+41         self.label.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+42         self.label.setObjectName(\cf3 "label"\cf0 )\par
+43         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+44         self.frame_2.setGeometry(QtCore.QRect(0, 80, 800, 520))\par
+45         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+46         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+47         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+48         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+49         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+50         self.lineEditLoginCPF = QtWidgets.QLineEdit(self.frame_2)\par
+51         self.lineEditLoginCPF.setGeometry(QtCore.QRect(270, 160, 260, 42))\par
+52         font = QtGui.QFont()\par
+53         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+54         font.setPointSize(16)\par
+55         font.setBold(\cf1 True\cf0 )\par
+56         font.setWeight(75)\par
+57         self.lineEditLoginCPF.setFont(font)\par
+58         self.lineEditLoginCPF.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+59         self.lineEditLoginCPF.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)\par
+60         self.lineEditLoginCPF.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+61 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+62 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+63 \cf3 "    border: 0;\\n"\cf0\par
+64 \cf3 "    border-radius: 5px;\\n"\cf0\par
+65 \cf3 "\}\\n"\cf0\par
+66 \cf3 "\\n"\cf0\par
+67 \cf3 ""\cf0 )\par
+68         self.lineEditLoginCPF.setMaxLength(11)\par
+69         self.lineEditLoginCPF.setDragEnabled(\cf1 False\cf0 )\par
+70         self.lineEditLoginCPF.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+71         self.lineEditLoginCPF.setClearButtonEnabled(\cf1 False\cf0 )\par
+72         self.lineEditLoginCPF.setObjectName(\cf3 "lineEditLoginCPF"\cf0 )\par
+73         self.lineEditLoginPassword = QtWidgets.QLineEdit(self.frame_2)\par
+74         self.lineEditLoginPassword.setGeometry(QtCore.QRect(270, 210, 260, 42))\par
+75         font = QtGui.QFont()\par
+76         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+77         font.setPointSize(16)\par
+78         font.setBold(\cf1 True\cf0 )\par
+79         font.setWeight(75)\par
+80         self.lineEditLoginPassword.setFont(font)\par
+81         self.lineEditLoginPassword.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+82         self.lineEditLoginPassword.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+83 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+84 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+85 \cf3 "    border: 0;\\n"\cf0\par
+86 \cf3 "    border-radius: 5px;\\n"\cf0\par
+87 \cf3 "\}\\n"\cf0\par
+88 \cf3 "\\n"\cf0\par
+89 \cf3 ""\cf0 )\par
+90         self.lineEditLoginPassword.setMaxLength(32)\par
+91         self.lineEditLoginPassword.setEchoMode(QtWidgets.QLineEdit.Password)\par
+92         self.lineEditLoginPassword.setDragEnabled(\cf1 False\cf0 )\par
+93         self.lineEditLoginPassword.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+94         self.lineEditLoginPassword.setClearButtonEnabled(\cf1 False\cf0 )\par
+95         self.lineEditLoginPassword.setObjectName(\cf3 "lineEditLoginPassword"\cf0 )\par
+96         self.pushButtonLogin = QtWidgets.QPushButton(self.frame_2)\par
+97         self.pushButtonLogin.setGeometry(QtCore.QRect(310, 275, 80, 36))\par
+98         font = QtGui.QFont()\par
+99         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+100         font.setPointSize(14)\par
+101         font.setBold(\cf1 True\cf0 )\par
+102         font.setWeight(75)\par
+103         self.pushButtonLogin.setFont(font)\par
+104         self.pushButtonLogin.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+105         self.pushButtonLogin.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+106 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+107 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+108 \cf3 "    border: 0;\\n"\cf0\par
+109 \cf3 "    border-radius: 5px;\\n"\cf0\par
+110 \cf3 "\}\\n"\cf0\par
+111 \cf3 "\\n"\cf0\par
+112 \cf3 "QPushButton:hover \{\\n"\cf0\par
+113 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+114 \cf3 "\}\\n"\cf0\par
+115 \cf3 "\\n"\cf0\par
+116 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+117 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+118 \cf3 "\}"\cf0 )\par
+119         self.pushButtonLogin.setObjectName(\cf3 "pushButtonLogin"\cf0 )\par
+120         self.pushButtonCreateAccount = QtWidgets.QPushButton(self.frame_2)\par
+121         self.pushButtonCreateAccount.setGeometry(QtCore.QRect(340, 400, 110, 30))\par
+122         font = QtGui.QFont()\par
+123         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+124         font.setPointSize(10)\par
+125         font.setBold(\cf1 True\cf0 )\par
+126         font.setWeight(75)\par
+127         self.pushButtonCreateAccount.setFont(font)\par
+128         self.pushButtonCreateAccount.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+129         self.pushButtonCreateAccount.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+130 \cf3 "    color: rgb(0, 55, 104);\\n"\cf0\par
+131 \cf3 "    border: 0;\\n"\cf0\par
+132 \cf3 "    border-radius: 5px;\\n"\cf0\par
+133 \cf3 "\}\\n"\cf0\par
+134 \cf3 "\\n"\cf0\par
+135 \cf3 "QPushButton:hover \{\\n"\cf0\par
+136 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+137 \cf3 "\}\\n"\cf0\par
+138 \cf3 "\\n"\cf0\par
+139 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+140 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+141 \cf3 "\}"\cf0 )\par
+142         self.pushButtonCreateAccount.setObjectName(\cf3 "pushButtonCreateAccount"\cf0 )\par
+143         self.pushButtonExit = QtWidgets.QPushButton(self.frame_2)\par
+144         self.pushButtonExit.setGeometry(QtCore.QRect(410, 275, 80, 36))\par
+145         font = QtGui.QFont()\par
+146         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+147         font.setPointSize(14)\par
+148         font.setBold(\cf1 True\cf0 )\par
+149         font.setWeight(75)\par
+150         self.pushButtonExit.setFont(font)\par
+151         self.pushButtonExit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+152         self.pushButtonExit.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+153 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+154 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+155 \cf3 "    border: 0;\\n"\cf0\par
+156 \cf3 "    border-radius: 5px;\\n"\cf0\par
+157 \cf3 "\}\\n"\cf0\par
+158 \cf3 "\\n"\cf0\par
+159 \cf3 "QPushButton:hover \{\\n"\cf0\par
+160 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+161 \cf3 "\}\\n"\cf0\par
+162 \cf3 "\\n"\cf0\par
+163 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+164 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+165 \cf3 "\}"\cf0 )\par
+166         self.pushButtonExit.setObjectName(\cf3 "pushButtonExit"\cf0 )\par
+167         MainWindow.setCentralWidget(self.centralwidget)\par
+168         self.statusbar = QtWidgets.QStatusBar(MainWindow)\par
+169         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+170         MainWindow.setStatusBar(self.statusbar)\par
+171 \par
+172         self.retranslateUi(MainWindow)\par
+173         QtCore.QMetaObject.connectSlotsByName(MainWindow)\par
+174 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenInitial.ScreenInitial.centralwidget\par
+screenInitial.ScreenInitial.frame\par
+screenInitial.ScreenInitial.frame_2\par
+screenInitial.ScreenInitial.label\par
+screenInitial.ScreenInitial.lineEditLoginCPF\par
+screenInitial.ScreenInitial.lineEditLoginPassword\par
+screenInitial.ScreenInitial.pushButtonCreateAccount\par
+screenInitial.ScreenInitial.pushButtonExit\par
+screenInitial.ScreenInitial.pushButtonLogin\par
+screenInitial.ScreenInitial.statusbar\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenInitial.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenMenu.ScreenMenu\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenMenu.ScreenMenu:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b MainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b MainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label\b0\par
+{\pntext\f1 3)\tab}\b lineEditMenuName\b0\par
+{\pntext\f1 4)\tab}\b label_2\b0\par
+{\pntext\f1 5)\tab}\b lineEditMenuBalance\b0\par
+{\pntext\f1 6)\tab}\b frame_2\b0\par
+{\pntext\f1 7)\tab}\b pushButtonWithdraw\b0\par
+{\pntext\f1 8)\tab}\b pushButtonExit\b0\par
+{\pntext\f1 9)\tab}\b pushButtonTransfer\b0\par
+{\pntext\f1 10)\tab}\b pushButtonExtract\b0\par
+{\pntext\f1 11)\tab}\b pushButtonDeposit\b0\par
+{\pntext\f1 12)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenMenu.ScreenMenu.retranslateUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 224     \cf1 def \cf0 retranslateUi(self, MainWindow):\par
+225         _translate = QtCore.QCoreApplication.translate\par
+226         MainWindow.setWindowTitle(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Menu"\cf0 ))\par
+227         self.label.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+228         self.label_2.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "R$:"\cf0 ))\par
+229         self.pushButtonWithdraw.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Sacar"\cf0 ))\par
+230         self.pushButtonExit.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Sair"\cf0 ))\par
+231         self.pushButtonTransfer.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Transfer\'eancia"\cf0 ))\par
+232         self.pushButtonExtract.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Extrato"\cf0 ))\par
+233         self.pushButtonDeposit.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Depositar"\cf0 ))\par
+234 \par
+235 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenMenu.ScreenMenu.setupUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, MainWindow):\par
+16         MainWindow.setObjectName(\cf3 "MainWindow"\cf0 )\par
+17         MainWindow.resize(800, 600)\par
+18         MainWindow.setMinimumSize(QtCore.QSize(800, 600))\par
+19         MainWindow.setMaximumSize(QtCore.QSize(800, 600))\par
+20         icon = QtGui.QIcon()\par
+21         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+22         MainWindow.setWindowIcon(icon)\par
+23         self.centralwidget = QtWidgets.QWidget(MainWindow)\par
+24         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+25         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+26         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 111))\par
+27         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);\\n"\cf0\par
+28 \cf3 "border: 0"\cf0 )\par
+29         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+30         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+31         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+32         self.label = QtWidgets.QLabel(self.frame)\par
+33         self.label.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+34         font = QtGui.QFont()\par
+35         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+36         font.setPointSize(28)\par
+37         font.setBold(\cf1 True\cf0 )\par
+38         font.setWeight(75)\par
+39         self.label.setFont(font)\par
+40         self.label.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+41         self.label.setObjectName(\cf3 "label"\cf0 )\par
+42         self.lineEditMenuName = QtWidgets.QLineEdit(self.frame)\par
+43         self.lineEditMenuName.setGeometry(QtCore.QRect(20, 80, 451, 20))\par
+44         font = QtGui.QFont()\par
+45         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+46         font.setPointSize(11)\par
+47         font.setBold(\cf1 True\cf0 )\par
+48         font.setWeight(75)\par
+49         self.lineEditMenuName.setFont(font)\par
+50         self.lineEditMenuName.setStyleSheet(\cf3 "\\n"\cf0\par
+51 \cf3 "color: rgb(255, 255,255);"\cf0 )\par
+52         self.lineEditMenuName.setReadOnly(\cf1 True\cf0 )\par
+53         self.lineEditMenuName.setObjectName(\cf3 "lineEditMenuName"\cf0 )\par
+54         self.label_2 = QtWidgets.QLabel(self.frame)\par
+55         self.label_2.setGeometry(QtCore.QRect(650, 80, 31, 21))\par
+56         font = QtGui.QFont()\par
+57         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+58         font.setPointSize(11)\par
+59         font.setBold(\cf1 True\cf0 )\par
+60         font.setWeight(75)\par
+61         self.label_2.setFont(font)\par
+62         self.label_2.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+63         self.label_2.setObjectName(\cf3 "label_2"\cf0 )\par
+64         self.lineEditMenuBalance = QtWidgets.QLineEdit(self.frame)\par
+65         self.lineEditMenuBalance.setGeometry(QtCore.QRect(680, 80, 101, 20))\par
+66         font = QtGui.QFont()\par
+67         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+68         font.setPointSize(11)\par
+69         font.setBold(\cf1 True\cf0 )\par
+70         font.setWeight(75)\par
+71         font.setStyleStrategy(QtGui.QFont.PreferAntialias)\par
+72         self.lineEditMenuBalance.setFont(font)\par
+73         self.lineEditMenuBalance.setStyleSheet(\cf3 "color: rgb(255, 255, 255);\\n"\cf0\par
+74 \cf3 "\\n"\cf0\par
+75 \cf3 "border: 0;"\cf0 )\par
+76         self.lineEditMenuBalance.setReadOnly(\cf1 True\cf0 )\par
+77         self.lineEditMenuBalance.setObjectName(\cf3 "lineEditMenuBalance"\cf0 )\par
+78         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+79         self.frame_2.setGeometry(QtCore.QRect(0, 109, 800, 571))\par
+80         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)\par
+81         sizePolicy.setHorizontalStretch(0)\par
+82         sizePolicy.setVerticalStretch(0)\par
+83         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())\par
+84         self.frame_2.setSizePolicy(sizePolicy)\par
+85         self.frame_2.setMinimumSize(QtCore.QSize(800, 400))\par
+86         self.frame_2.setMaximumSize(QtCore.QSize(800, 600))\par
+87         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+88         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+89         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+90         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+91         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+92         self.pushButtonWithdraw = QtWidgets.QPushButton(self.frame_2)\par
+93         self.pushButtonWithdraw.setGeometry(QtCore.QRect(148, 50, 202, 92))\par
+94         font = QtGui.QFont()\par
+95         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+96         font.setPointSize(16)\par
+97         font.setBold(\cf1 True\cf0 )\par
+98         font.setWeight(75)\par
+99         self.pushButtonWithdraw.setFont(font)\par
+100         self.pushButtonWithdraw.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+101         self.pushButtonWithdraw.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+102 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+103 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+104 \cf3 "    border: 0;\\n"\cf0\par
+105 \cf3 "    border-radius: 5px;\\n"\cf0\par
+106 \cf3 "\}\\n"\cf0\par
+107 \cf3 "\\n"\cf0\par
+108 \cf3 "QPushButton:hover \{\\n"\cf0\par
+109 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+110 \cf3 "\}\\n"\cf0\par
+111 \cf3 "\\n"\cf0\par
+112 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+113 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+114 \cf3 "\}"\cf0 )\par
+115         self.pushButtonWithdraw.setObjectName(\cf3 "pushButtonWithdraw"\cf0 )\par
+116         self.pushButtonExit = QtWidgets.QPushButton(self.frame_2)\par
+117         self.pushButtonExit.setGeometry(QtCore.QRect(350, 420, 100, 36))\par
+118         font = QtGui.QFont()\par
+119         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+120         font.setPointSize(14)\par
+121         font.setBold(\cf1 True\cf0 )\par
+122         font.setWeight(75)\par
+123         self.pushButtonExit.setFont(font)\par
+124         self.pushButtonExit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+125         self.pushButtonExit.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+126 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+127 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+128 \cf3 "    border: 0;\\n"\cf0\par
+129 \cf3 "    border-radius: 5px;\\n"\cf0\par
+130 \cf3 "\}\\n"\cf0\par
+131 \cf3 "\\n"\cf0\par
+132 \cf3 "QPushButton:hover \{\\n"\cf0\par
+133 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+134 \cf3 "\}\\n"\cf0\par
+135 \cf3 "\\n"\cf0\par
+136 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+137 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+138 \cf3 "\}"\cf0 )\par
+139         self.pushButtonExit.setObjectName(\cf3 "pushButtonExit"\cf0 )\par
+140         self.pushButtonTransfer = QtWidgets.QPushButton(self.frame_2)\par
+141         self.pushButtonTransfer.setGeometry(QtCore.QRect(148, 200, 202, 92))\par
+142         font = QtGui.QFont()\par
+143         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+144         font.setPointSize(16)\par
+145         font.setBold(\cf1 True\cf0 )\par
+146         font.setWeight(75)\par
+147         self.pushButtonTransfer.setFont(font)\par
+148         self.pushButtonTransfer.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+149         self.pushButtonTransfer.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+150 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+151 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+152 \cf3 "    border: 0;\\n"\cf0\par
+153 \cf3 "    border-radius: 5px;\\n"\cf0\par
+154 \cf3 "\}\\n"\cf0\par
+155 \cf3 "\\n"\cf0\par
+156 \cf3 "QPushButton:hover \{\\n"\cf0\par
+157 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+158 \cf3 "\}\\n"\cf0\par
+159 \cf3 "\\n"\cf0\par
+160 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+161 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+162 \cf3 "\}"\cf0 )\par
+163         self.pushButtonTransfer.setObjectName(\cf3 "pushButtonTransfer"\cf0 )\par
+164         self.pushButtonExtract = QtWidgets.QPushButton(self.frame_2)\par
+165         self.pushButtonExtract.setGeometry(QtCore.QRect(450, 200, 202, 92))\par
+166         font = QtGui.QFont()\par
+167         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+168         font.setPointSize(16)\par
+169         font.setBold(\cf1 True\cf0 )\par
+170         font.setWeight(75)\par
+171         self.pushButtonExtract.setFont(font)\par
+172         self.pushButtonExtract.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+173         self.pushButtonExtract.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+174 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+175 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+176 \cf3 "    border: 0;\\n"\cf0\par
+177 \cf3 "    border-radius: 5px;\\n"\cf0\par
+178 \cf3 "\}\\n"\cf0\par
+179 \cf3 "\\n"\cf0\par
+180 \cf3 "QPushButton:hover \{\\n"\cf0\par
+181 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+182 \cf3 "\}\\n"\cf0\par
+183 \cf3 "\\n"\cf0\par
+184 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+185 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+186 \cf3 "\}"\cf0 )\par
+187         self.pushButtonExtract.setObjectName(\cf3 "pushButtonExtract"\cf0 )\par
+188         self.pushButtonDeposit = QtWidgets.QPushButton(self.frame_2)\par
+189         self.pushButtonDeposit.setGeometry(QtCore.QRect(450, 50, 202, 92))\par
+190         font = QtGui.QFont()\par
+191         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+192         font.setPointSize(16)\par
+193         font.setBold(\cf1 True\cf0 )\par
+194         font.setWeight(75)\par
+195         self.pushButtonDeposit.setFont(font)\par
+196         self.pushButtonDeposit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+197         self.pushButtonDeposit.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+198 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+199 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+200 \cf3 "    border: 0;\\n"\cf0\par
+201 \cf3 "    border-radius: 5px;\\n"\cf0\par
+202 \cf3 "\}\\n"\cf0\par
+203 \cf3 "\\n"\cf0\par
+204 \cf3 "QPushButton:hover \{\\n"\cf0\par
+205 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+206 \cf3 "\}\\n"\cf0\par
+207 \cf3 "\\n"\cf0\par
+208 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+209 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+210 \cf3 "\}"\cf0 )\par
+211         self.pushButtonDeposit.setObjectName(\cf3 "pushButtonDeposit"\cf0 )\par
+212         MainWindow.setCentralWidget(self.centralwidget)\par
+213         self.statusbar = QtWidgets.QStatusBar(MainWindow)\par
+214         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+215         MainWindow.setStatusBar(self.statusbar)\par
+216 \par
+217         self.retranslateUi(MainWindow)\par
+218         QtCore.QMetaObject.connectSlotsByName(MainWindow)\par
+219         MainWindow.setTabOrder(self.pushButtonWithdraw, self.pushButtonTransfer)\par
+220         MainWindow.setTabOrder(self.pushButtonTransfer, self.pushButtonDeposit)\par
+221         MainWindow.setTabOrder(self.pushButtonDeposit, self.pushButtonExtract)\par
+222         MainWindow.setTabOrder(self.pushButtonExtract, self.pushButtonExit)\par
+223 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenMenu.ScreenMenu.centralwidget\par
+screenMenu.ScreenMenu.frame\par
+screenMenu.ScreenMenu.frame_2\par
+screenMenu.ScreenMenu.label\par
+screenMenu.ScreenMenu.label_2\par
+screenMenu.ScreenMenu.lineEditMenuBalance\par
+screenMenu.ScreenMenu.lineEditMenuName\par
+screenMenu.ScreenMenu.pushButtonDeposit\par
+screenMenu.ScreenMenu.pushButtonExit\par
+screenMenu.ScreenMenu.pushButtonExtract\par
+screenMenu.ScreenMenu.pushButtonTransfer\par
+screenMenu.ScreenMenu.pushButtonWithdraw\par
+screenMenu.ScreenMenu.statusbar\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenMenu.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenRegister.ScreenRegister\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenRegister.ScreenRegister:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b MainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b MainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label\b0\par
+{\pntext\f1 3)\tab}\b frame_2\b0\par
+{\pntext\f1 4)\tab}\b lineEditRegisterName\b0\par
+{\pntext\f1 5)\tab}\b lineEditRegisterSurname\b0\par
+{\pntext\f1 6)\tab}\b pushButtonRegister\b0\par
+{\pntext\f1 7)\tab}\b pushButtonComeBack\b0\par
+{\pntext\f1 8)\tab}\b lineEditRegisterCPF\b0\par
+{\pntext\f1 9)\tab}\b label_2\b0\par
+{\pntext\f1 10)\tab}\b label_3\b0\par
+{\pntext\f1 11)\tab}\b lineEditRegisterAccountNumber\b0\par
+{\pntext\f1 12)\tab}\b lineEditRegisterAccountPassword\b0\par
+{\pntext\f1 13)\tab}\b lineEditRegisterAccountBalance\b0\par
+{\pntext\f1 14)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenRegister.ScreenRegister.retranslateUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 280     \cf1 def \cf0 retranslateUi(self, MainWindow):\par
+281         _translate = QtCore.QCoreApplication.translate\par
+282         MainWindow.setWindowTitle(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Cadastro"\cf0 ))\par
+283         self.label.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+284         self.lineEditRegisterName.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Nome"\cf0 ))\par
+285         self.lineEditRegisterSurname.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Sobrenome"\cf0 ))\par
+286         self.pushButtonRegister.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Criar"\cf0 ))\par
+287         self.pushButtonComeBack.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Voltar"\cf0 ))\par
+288         self.lineEditRegisterCPF.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "CPF"\cf0 ))\par
+289         self.label_2.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Dados Pessoais"\cf0 ))\par
+290         self.label_3.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Dados Banc\'e1rios"\cf0 ))\par
+291         self.lineEditRegisterAccountNumber.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Conta"\cf0 ))\par
+292         self.lineEditRegisterAccountPassword.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Senha"\cf0 ))\par
+293         self.lineEditRegisterAccountBalance.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Saldo"\cf0 ))\par
+294 \par
+295 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenRegister.ScreenRegister.setupUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, MainWindow):\par
+16         MainWindow.setObjectName(\cf3 "MainWindow"\cf0 )\par
+17         MainWindow.resize(800, 600)\par
+18         MainWindow.setMinimumSize(QtCore.QSize(800, 600))\par
+19         MainWindow.setMaximumSize(QtCore.QSize(800, 600))\par
+20         icon = QtGui.QIcon()\par
+21         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+22         MainWindow.setWindowIcon(icon)\par
+23         self.centralwidget = QtWidgets.QWidget(MainWindow)\par
+24         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+25         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+26         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 80))\par
+27         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);"\cf0 )\par
+28         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+29         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+30         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+31         self.label = QtWidgets.QLabel(self.frame)\par
+32         self.label.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+33         font = QtGui.QFont()\par
+34         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+35         font.setPointSize(28)\par
+36         font.setBold(\cf1 True\cf0 )\par
+37         font.setWeight(75)\par
+38         self.label.setFont(font)\par
+39         self.label.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+40         self.label.setObjectName(\cf3 "label"\cf0 )\par
+41         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+42         self.frame_2.setGeometry(QtCore.QRect(-10, 80, 800, 520))\par
+43         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+44         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+45         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+46         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+47         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+48         self.lineEditRegisterName = QtWidgets.QLineEdit(self.frame_2)\par
+49         self.lineEditRegisterName.setGeometry(QtCore.QRect(60, 130, 260, 42))\par
+50         font = QtGui.QFont()\par
+51         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+52         font.setPointSize(16)\par
+53         font.setBold(\cf1 True\cf0 )\par
+54         font.setWeight(75)\par
+55         self.lineEditRegisterName.setFont(font)\par
+56         self.lineEditRegisterName.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+57         self.lineEditRegisterName.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+58 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+59 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+60 \cf3 "    border: 0;\\n"\cf0\par
+61 \cf3 "    border-radius: 5px;\\n"\cf0\par
+62 \cf3 "\}\\n"\cf0\par
+63 \cf3 "\\n"\cf0\par
+64 \cf3 ""\cf0 )\par
+65         self.lineEditRegisterName.setMaxLength(40)\par
+66         self.lineEditRegisterName.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+67         self.lineEditRegisterName.setDragEnabled(\cf1 False\cf0 )\par
+68         self.lineEditRegisterName.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+69         self.lineEditRegisterName.setClearButtonEnabled(\cf1 False\cf0 )\par
+70         self.lineEditRegisterName.setObjectName(\cf3 "lineEditRegisterName"\cf0 )\par
+71         self.lineEditRegisterSurname = QtWidgets.QLineEdit(self.frame_2)\par
+72         self.lineEditRegisterSurname.setGeometry(QtCore.QRect(60, 180, 260, 42))\par
+73         font = QtGui.QFont()\par
+74         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+75         font.setPointSize(16)\par
+76         font.setBold(\cf1 True\cf0 )\par
+77         font.setWeight(75)\par
+78         self.lineEditRegisterSurname.setFont(font)\par
+79         self.lineEditRegisterSurname.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+80         self.lineEditRegisterSurname.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+81 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+82 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+83 \cf3 "    border: 0;\\n"\cf0\par
+84 \cf3 "    border-radius: 5px;\\n"\cf0\par
+85 \cf3 "\}\\n"\cf0\par
+86 \cf3 "\\n"\cf0\par
+87 \cf3 ""\cf0 )\par
+88         self.lineEditRegisterSurname.setInputMethodHints(QtCore.Qt.ImhDate)\par
+89         self.lineEditRegisterSurname.setMaxLength(11)\par
+90         self.lineEditRegisterSurname.setEchoMode(QtWidgets.QLineEdit.Normal)\par
+91         self.lineEditRegisterSurname.setDragEnabled(\cf1 False\cf0 )\par
+92         self.lineEditRegisterSurname.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+93         self.lineEditRegisterSurname.setClearButtonEnabled(\cf1 False\cf0 )\par
+94         self.lineEditRegisterSurname.setObjectName(\cf3 "lineEditRegisterSurname"\cf0 )\par
+95         self.pushButtonRegister = QtWidgets.QPushButton(self.frame_2)\par
+96         self.pushButtonRegister.setGeometry(QtCore.QRect(350, 380, 100, 36))\par
+97         font = QtGui.QFont()\par
+98         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+99         font.setPointSize(14)\par
+100         font.setBold(\cf1 True\cf0 )\par
+101         font.setWeight(75)\par
+102         self.pushButtonRegister.setFont(font)\par
+103         self.pushButtonRegister.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+104         self.pushButtonRegister.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+105 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+106 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+107 \cf3 "    border: 0;\\n"\cf0\par
+108 \cf3 "    border-radius: 5px;\\n"\cf0\par
+109 \cf3 "\}\\n"\cf0\par
+110 \cf3 "\\n"\cf0\par
+111 \cf3 "QPushButton:hover \{\\n"\cf0\par
+112 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+113 \cf3 "\}\\n"\cf0\par
+114 \cf3 "\\n"\cf0\par
+115 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+116 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+117 \cf3 "\}"\cf0 )\par
+118         self.pushButtonRegister.setObjectName(\cf3 "pushButtonRegister"\cf0 )\par
+119         self.pushButtonComeBack = QtWidgets.QPushButton(self.frame_2)\par
+120         self.pushButtonComeBack.setGeometry(QtCore.QRect(345, 436, 110, 30))\par
+121         font = QtGui.QFont()\par
+122         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+123         font.setPointSize(10)\par
+124         font.setBold(\cf1 True\cf0 )\par
+125         font.setWeight(75)\par
+126         self.pushButtonComeBack.setFont(font)\par
+127         self.pushButtonComeBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+128         self.pushButtonComeBack.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+129 \cf3 "    color: rgb(0, 55, 104);\\n"\cf0\par
+130 \cf3 "    border: 0;\\n"\cf0\par
+131 \cf3 "    border-radius: 5px;\\n"\cf0\par
+132 \cf3 "\}\\n"\cf0\par
+133 \cf3 "\\n"\cf0\par
+134 \cf3 "QPushButton:hover \{\\n"\cf0\par
+135 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+136 \cf3 "\}\\n"\cf0\par
+137 \cf3 "\\n"\cf0\par
+138 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+139 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+140 \cf3 "\}"\cf0 )\par
+141         self.pushButtonComeBack.setObjectName(\cf3 "pushButtonComeBack"\cf0 )\par
+142         self.lineEditRegisterCPF = QtWidgets.QLineEdit(self.frame_2)\par
+143         self.lineEditRegisterCPF.setGeometry(QtCore.QRect(60, 230, 260, 42))\par
+144         font = QtGui.QFont()\par
+145         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+146         font.setPointSize(16)\par
+147         font.setBold(\cf1 True\cf0 )\par
+148         font.setWeight(75)\par
+149         self.lineEditRegisterCPF.setFont(font)\par
+150         self.lineEditRegisterCPF.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+151         self.lineEditRegisterCPF.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+152 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+153 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+154 \cf3 "    border: 0;\\n"\cf0\par
+155 \cf3 "    border-radius: 5px;\\n"\cf0\par
+156 \cf3 "\}\\n"\cf0\par
+157 \cf3 "\\n"\cf0\par
+158 \cf3 ""\cf0 )\par
+159         self.lineEditRegisterCPF.setMaxLength(11)\par
+160         self.lineEditRegisterCPF.setDragEnabled(\cf1 False\cf0 )\par
+161         self.lineEditRegisterCPF.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+162         self.lineEditRegisterCPF.setClearButtonEnabled(\cf1 False\cf0 )\par
+163         self.lineEditRegisterCPF.setObjectName(\cf3 "lineEditRegisterCPF"\cf0 )\par
+164         self.label_2 = QtWidgets.QLabel(self.frame_2)\par
+165         self.label_2.setGeometry(QtCore.QRect(40, 60, 300, 42))\par
+166         font = QtGui.QFont()\par
+167         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+168         font.setPointSize(20)\par
+169         font.setBold(\cf1 True\cf0 )\par
+170         font.setWeight(75)\par
+171         self.label_2.setFont(font)\par
+172         self.label_2.setStyleSheet(\cf3 "background-color: rgb(255, 255, 255);\\n"\cf0\par
+173 \cf3 "color: rgb(0, 55, 104);\\n"\cf0\par
+174 \cf3 "border: 0;\\n"\cf0\par
+175 \cf3 "border-radius: 5px;"\cf0 )\par
+176         self.label_2.setAlignment(QtCore.Qt.AlignCenter)\par
+177         self.label_2.setObjectName(\cf3 "label_2"\cf0 )\par
+178         self.label_3 = QtWidgets.QLabel(self.frame_2)\par
+179         self.label_3.setGeometry(QtCore.QRect(450, 60, 300, 42))\par
+180         font = QtGui.QFont()\par
+181         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+182         font.setPointSize(20)\par
+183         font.setBold(\cf1 True\cf0 )\par
+184         font.setWeight(75)\par
+185         self.label_3.setFont(font)\par
+186         self.label_3.setStyleSheet(\cf3 "background-color: rgb(255, 255, 255);\\n"\cf0\par
+187 \cf3 "color: rgb(0, 55, 104);\\n"\cf0\par
+188 \cf3 "border: 0;\\n"\cf0\par
+189 \cf3 "border-radius: 5px;"\cf0 )\par
+190         self.label_3.setAlignment(QtCore.Qt.AlignCenter)\par
+191         self.label_3.setObjectName(\cf3 "label_3"\cf0 )\par
+192         self.lineEditRegisterAccountNumber = QtWidgets.QLineEdit(self.frame_2)\par
+193         self.lineEditRegisterAccountNumber.setGeometry(QtCore.QRect(470, 130, 260, 42))\par
+194         font = QtGui.QFont()\par
+195         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+196         font.setPointSize(16)\par
+197         font.setBold(\cf1 True\cf0 )\par
+198         font.setWeight(75)\par
+199         self.lineEditRegisterAccountNumber.setFont(font)\par
+200         self.lineEditRegisterAccountNumber.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+201         self.lineEditRegisterAccountNumber.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+202 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+203 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+204 \cf3 "    border: 0;\\n"\cf0\par
+205 \cf3 "    border-radius: 5px;\\n"\cf0\par
+206 \cf3 "\}\\n"\cf0\par
+207 \cf3 "\\n"\cf0\par
+208 \cf3 ""\cf0 )\par
+209         self.lineEditRegisterAccountNumber.setText(\cf3 ""\cf0 )\par
+210         self.lineEditRegisterAccountNumber.setMaxLength(40)\par
+211         self.lineEditRegisterAccountNumber.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+212         self.lineEditRegisterAccountNumber.setDragEnabled(\cf1 False\cf0 )\par
+213         self.lineEditRegisterAccountNumber.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+214         self.lineEditRegisterAccountNumber.setClearButtonEnabled(\cf1 False\cf0 )\par
+215         self.lineEditRegisterAccountNumber.setObjectName(\cf3 "lineEditRegisterAccountNumber"\cf0 )\par
+216         self.lineEditRegisterAccountPassword = QtWidgets.QLineEdit(self.frame_2)\par
+217         self.lineEditRegisterAccountPassword.setGeometry(QtCore.QRect(470, 230, 260, 42))\par
+218         font = QtGui.QFont()\par
+219         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+220         font.setPointSize(16)\par
+221         font.setBold(\cf1 True\cf0 )\par
+222         font.setWeight(75)\par
+223         self.lineEditRegisterAccountPassword.setFont(font)\par
+224         self.lineEditRegisterAccountPassword.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+225         self.lineEditRegisterAccountPassword.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+226 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+227 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+228 \cf3 "    border: 0;\\n"\cf0\par
+229 \cf3 "    border-radius: 5px;\\n"\cf0\par
+230 \cf3 "\}\\n"\cf0\par
+231 \cf3 "\\n"\cf0\par
+232 \cf3 ""\cf0 )\par
+233         self.lineEditRegisterAccountPassword.setText(\cf3 ""\cf0 )\par
+234         self.lineEditRegisterAccountPassword.setMaxLength(40)\par
+235         self.lineEditRegisterAccountPassword.setEchoMode(QtWidgets.QLineEdit.Password)\par
+236         self.lineEditRegisterAccountPassword.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+237         self.lineEditRegisterAccountPassword.setDragEnabled(\cf1 False\cf0 )\par
+238         self.lineEditRegisterAccountPassword.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+239         self.lineEditRegisterAccountPassword.setClearButtonEnabled(\cf1 False\cf0 )\par
+240         self.lineEditRegisterAccountPassword.setObjectName(\cf3 "lineEditRegisterAccountPassword"\cf0 )\par
+241         self.lineEditRegisterAccountBalance = QtWidgets.QLineEdit(self.frame_2)\par
+242         self.lineEditRegisterAccountBalance.setGeometry(QtCore.QRect(470, 180, 260, 42))\par
+243         font = QtGui.QFont()\par
+244         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+245         font.setPointSize(16)\par
+246         font.setBold(\cf1 True\cf0 )\par
+247         font.setWeight(75)\par
+248         self.lineEditRegisterAccountBalance.setFont(font)\par
+249         self.lineEditRegisterAccountBalance.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+250         self.lineEditRegisterAccountBalance.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+251 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+252 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+253 \cf3 "    border: 0;\\n"\cf0\par
+254 \cf3 "    border-radius: 5px;\\n"\cf0\par
+255 \cf3 "\}\\n"\cf0\par
+256 \cf3 "\\n"\cf0\par
+257 \cf3 ""\cf0 )\par
+258         self.lineEditRegisterAccountBalance.setText(\cf3 ""\cf0 )\par
+259         self.lineEditRegisterAccountBalance.setMaxLength(40)\par
+260         self.lineEditRegisterAccountBalance.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+261         self.lineEditRegisterAccountBalance.setDragEnabled(\cf1 False\cf0 )\par
+262         self.lineEditRegisterAccountBalance.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+263         self.lineEditRegisterAccountBalance.setClearButtonEnabled(\cf1 False\cf0 )\par
+264         self.lineEditRegisterAccountBalance.setObjectName(\cf3 "lineEditRegisterAccountBalance"\cf0 )\par
+265         MainWindow.setCentralWidget(self.centralwidget)\par
+266         self.statusbar = QtWidgets.QStatusBar(MainWindow)\par
+267         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+268         MainWindow.setStatusBar(self.statusbar)\par
+269 \par
+270         self.retranslateUi(MainWindow)\par
+271         QtCore.QMetaObject.connectSlotsByName(MainWindow)\par
+272         MainWindow.setTabOrder(self.lineEditRegisterName, self.lineEditRegisterSurname)\par
+273         MainWindow.setTabOrder(self.lineEditRegisterSurname, self.lineEditRegisterCPF)\par
+274         MainWindow.setTabOrder(self.lineEditRegisterCPF, self.lineEditRegisterAccountNumber)\par
+275         MainWindow.setTabOrder(self.lineEditRegisterAccountNumber, self.lineEditRegisterAccountBalance)\par
+276         MainWindow.setTabOrder(self.lineEditRegisterAccountBalance, self.lineEditRegisterAccountPassword)\par
+277         MainWindow.setTabOrder(self.lineEditRegisterAccountPassword, self.pushButtonRegister)\par
+278         MainWindow.setTabOrder(self.pushButtonRegister, self.pushButtonComeBack)\par
+279 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenRegister.ScreenRegister.centralwidget\par
+screenRegister.ScreenRegister.frame\par
+screenRegister.ScreenRegister.frame_2\par
+screenRegister.ScreenRegister.label\par
+screenRegister.ScreenRegister.label_2\par
+screenRegister.ScreenRegister.label_3\par
+screenRegister.ScreenRegister.lineEditRegisterAccountBalance\par
+screenRegister.ScreenRegister.lineEditRegisterAccountNumber\par
+screenRegister.ScreenRegister.lineEditRegisterAccountPassword\par
+screenRegister.ScreenRegister.lineEditRegisterCPF\par
+screenRegister.ScreenRegister.lineEditRegisterName\par
+screenRegister.ScreenRegister.lineEditRegisterSurname\par
+screenRegister.ScreenRegister.pushButtonComeBack\par
+OscreenRegister.ScreenRegister.pushButtonRegister\par
+screenRegister.ScreenRegister.statusbar\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenRegister.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenTelas.ScreenTelas\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenTelas.ScreenTelas:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUI\b0  (self, Main)\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 QtStack\b0\par
+{\pntext\f1 1)\tab}\b stack0\b0\par
+{\pntext\f1 2)\tab}\b stack1\b0\par
+{\pntext\f1 3)\tab}\b stack2\b0\par
+{\pntext\f1 4)\tab}\b stack3\b0\par
+{\pntext\f1 5)\tab}\b stack4\b0\par
+{\pntext\f1 6)\tab}\b stack5\b0\par
+{\pntext\f1 7)\tab}\b stack6\b0\par
+{\pntext\f1 8)\tab}\b screenInitial\b0\par
+{\pntext\f1 9)\tab}\b screenRegister\b0\par
+{\pntext\f1 10)\tab}\b screenMenu\b0\par
+{\pntext\f1 11)\tab}\b screenWithdraw\b0\par
+{\pntext\f1 12)\tab}\b screenDeposit\b0\par
+{\pntext\f1 13)\tab}\b screenTransfer\b0\par
+{\pntext\f1 14)\tab}\b screenExtract\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenTelas.ScreenTelas.setupUI (  \i self\i0 ,   \i Main\i0 )\b0\f1\fs22\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\f2\fs16         DESCRIPTION:\par
+
+\pard\widctlpar\li360\sb30\sa60\qj             criada para chamar todas as telas. e configurar o layout\f1\fs22  \par
+
+\pard\cbpat5\shading1000\widctlpar\li360\f2\fs16 21     \cf1 def \cf0 setupUI(self, Main):\par
+22         \cf3 '''\cf0\par
+23 \cf3         DESCRIPTION:\cf0\par
+24 \cf3             criada para chamar todas as telas. e configurar o layout\cf0\par
+25 \cf3         '''\cf0\par
+26         Main.setObjectName(\cf3 'Main'\cf0 )\par
+27         Main.resize(800, 600)\par
+28 \par
+29         self.QtStack = QtWidgets.QStackedLayout()\par
+30 \par
+31         self.stack0 = QtWidgets.QMainWindow()\par
+32         self.stack1 = QtWidgets.QMainWindow()\par
+33         self.stack2 = QtWidgets.QMainWindow()\par
+34         self.stack3 = QtWidgets.QMainWindow()\par
+35         self.stack4 = QtWidgets.QMainWindow()\par
+36         self.stack5 = QtWidgets.QMainWindow()\par
+37         self.stack6 = QtWidgets.QMainWindow()\par
+38 \par
+39         self.screenInitial = ScreenInitial()\par
+40         self.screenInitial.setupUi(self.stack0)\par
+41 \par
+42         self.screenRegister = ScreenRegister()\par
+43         self.screenRegister.setupUi(self.stack1)\par
+44 \par
+45         self.screenMenu = ScreenMenu()\par
+46         self.screenMenu.setupUi(self.stack2)\par
+47 \par
+48         self.screenWithdraw = ScreenWithdraw()\par
+49         self.screenWithdraw.setupUi(self.stack3)\par
+50 \par
+51         self.screenDeposit = ScreenDeposit()\par
+52         self.screenDeposit.setupUi(self.stack4)\par
+53 \par
+54         self.screenTransfer = ScreenTransfer()\par
+55         self.screenTransfer.setupUi(self.stack5)\par
+56 \par
+57         self.screenExtract = ScreenExtract()\par
+58         self.screenExtract.setupUi(self.stack6)\par
+59 \par
+60         self.QtStack.addWidget(self.stack0)\par
+61         self.QtStack.addWidget(self.stack1)\par
+62         self.QtStack.addWidget(self.stack2)\par
+63         self.QtStack.addWidget(self.stack3)\par
+64         self.QtStack.addWidget(self.stack4)\par
+65         self.QtStack.addWidget(self.stack5)\par
+66         self.QtStack.addWidget(self.stack6)\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenTelas.ScreenTelas.QtStack\par
+screenTelas.ScreenTelas.screenDeposit\par
+screenTelas.ScreenTelas.screenExtract\par
+screenTelas.ScreenTelas.screenInitial\par
+screenTelas.ScreenTelas.screenMenu\par
+screenTelas.ScreenTelas.screenRegister\par
+screenTelas.ScreenTelas.screenTransfer\par
+screenTelas.ScreenTelas.screenWithdraw\par
+screenTelas.ScreenTelas.stack0\par
+screenTelas.ScreenTelas.stack1\par
+screenTelas.ScreenTelas.stack2\par
+screenTelas.ScreenTelas.stack3\par
+screenTelas.ScreenTelas.stack4\par
+screenTelas.ScreenTelas.stack5\par
+screenTelas.ScreenTelas.stack6\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenTelas.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenTransfer.ScreenTransfer\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenTransfer.ScreenTransfer:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b MainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b MainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label_2\b0\par
+{\pntext\f1 3)\tab}\b frame_2\b0\par
+{\pntext\f1 4)\tab}\b pushButtonTransferTransfer\b0\par
+{\pntext\f1 5)\tab}\b lineEditTransferValue\b0\par
+{\pntext\f1 6)\tab}\b pushButtonComeBack\b0\par
+{\pntext\f1 7)\tab}\b lineEditTransferAccountNumber\b0\par
+{\pntext\f1 8)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenTransfer.ScreenTransfer.retranslateUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 159     \cf1 def \cf0 retranslateUi(self, MainWindow):\par
+160         _translate = QtCore.QCoreApplication.translate\par
+161         MainWindow.setWindowTitle(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Transfer\'eancia"\cf0 ))\par
+162         self.label_2.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+163         self.pushButtonTransferTransfer.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Transferir"\cf0 ))\par
+164         self.lineEditTransferValue.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Valor"\cf0 ))\par
+165         self.pushButtonComeBack.setText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Voltar"\cf0 ))\par
+166         self.lineEditTransferAccountNumber.setPlaceholderText(_translate(\cf3 "MainWindow"\cf0 , \cf3 "Conta"\cf0 ))\par
+167 \par
+168 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenTransfer.ScreenTransfer.setupUi (  \i self\i0 ,   \i MainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, MainWindow):\par
+16         MainWindow.setObjectName(\cf3 "MainWindow"\cf0 )\par
+17         MainWindow.resize(800, 600)\par
+18         MainWindow.setMinimumSize(QtCore.QSize(800, 600))\par
+19         MainWindow.setMaximumSize(QtCore.QSize(800, 600))\par
+20         icon = QtGui.QIcon()\par
+21         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+22         MainWindow.setWindowIcon(icon)\par
+23         self.centralwidget = QtWidgets.QWidget(MainWindow)\par
+24         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+25         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+26         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 80))\par
+27         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);"\cf0 )\par
+28         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+29         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+30         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+31         self.label_2 = QtWidgets.QLabel(self.frame)\par
+32         self.label_2.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+33         font = QtGui.QFont()\par
+34         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+35         font.setPointSize(28)\par
+36         font.setBold(\cf1 True\cf0 )\par
+37         font.setWeight(75)\par
+38         self.label_2.setFont(font)\par
+39         self.label_2.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+40         self.label_2.setObjectName(\cf3 "label_2"\cf0 )\par
+41         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+42         self.frame_2.setGeometry(QtCore.QRect(0, 80, 800, 600))\par
+43         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)\par
+44         sizePolicy.setHorizontalStretch(0)\par
+45         sizePolicy.setVerticalStretch(0)\par
+46         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())\par
+47         self.frame_2.setSizePolicy(sizePolicy)\par
+48         self.frame_2.setMinimumSize(QtCore.QSize(800, 600))\par
+49         self.frame_2.setMaximumSize(QtCore.QSize(800, 600))\par
+50         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+51         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+52         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+53         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+54         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+55         self.pushButtonTransferTransfer = QtWidgets.QPushButton(self.frame_2)\par
+56         self.pushButtonTransferTransfer.setGeometry(QtCore.QRect(336, 250, 128, 36))\par
+57         font = QtGui.QFont()\par
+58         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+59         font.setPointSize(14)\par
+60         font.setBold(\cf1 True\cf0 )\par
+61         font.setWeight(75)\par
+62         self.pushButtonTransferTransfer.setFont(font)\par
+63         self.pushButtonTransferTransfer.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+64         self.pushButtonTransferTransfer.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+65 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+66 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+67 \cf3 "    border: 0;\\n"\cf0\par
+68 \cf3 "    border-radius: 5px;\\n"\cf0\par
+69 \cf3 "\}\\n"\cf0\par
+70 \cf3 "\\n"\cf0\par
+71 \cf3 "QPushButton:hover \{\\n"\cf0\par
+72 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+73 \cf3 "\}\\n"\cf0\par
+74 \cf3 "\\n"\cf0\par
+75 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+76 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+77 \cf3 "\}"\cf0 )\par
+78         self.pushButtonTransferTransfer.setObjectName(\cf3 "pushButtonTransferTransfer"\cf0 )\par
+79         self.lineEditTransferValue = QtWidgets.QLineEdit(self.frame_2)\par
+80         self.lineEditTransferValue.setGeometry(QtCore.QRect(270, 170, 260, 42))\par
+81         font = QtGui.QFont()\par
+82         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+83         font.setPointSize(16)\par
+84         font.setBold(\cf1 True\cf0 )\par
+85         font.setWeight(75)\par
+86         self.lineEditTransferValue.setFont(font)\par
+87         self.lineEditTransferValue.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+88         self.lineEditTransferValue.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+89 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+90 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+91 \cf3 "    border: 0;\\n"\cf0\par
+92 \cf3 "    border-radius: 5px;\\n"\cf0\par
+93 \cf3 "\}\\n"\cf0\par
+94 \cf3 "\\n"\cf0\par
+95 \cf3 ""\cf0 )\par
+96         self.lineEditTransferValue.setMaxLength(10)\par
+97         self.lineEditTransferValue.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+98         self.lineEditTransferValue.setDragEnabled(\cf1 False\cf0 )\par
+99         self.lineEditTransferValue.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+100         self.lineEditTransferValue.setClearButtonEnabled(\cf1 False\cf0 )\par
+101         self.lineEditTransferValue.setObjectName(\cf3 "lineEditTransferValue"\cf0 )\par
+102         self.pushButtonComeBack = QtWidgets.QPushButton(self.frame_2)\par
+103         self.pushButtonComeBack.setGeometry(QtCore.QRect(345, 410, 110, 30))\par
+104         font = QtGui.QFont()\par
+105         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+106         font.setPointSize(10)\par
+107         font.setBold(\cf1 True\cf0 )\par
+108         font.setWeight(75)\par
+109         self.pushButtonComeBack.setFont(font)\par
+110         self.pushButtonComeBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+111         self.pushButtonComeBack.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+112 \cf3 "    color: rgb(0, 55, 104);\\n"\cf0\par
+113 \cf3 "    border: 0;\\n"\cf0\par
+114 \cf3 "    border-radius: 5px;\\n"\cf0\par
+115 \cf3 "\}\\n"\cf0\par
+116 \cf3 "\\n"\cf0\par
+117 \cf3 "QPushButton:hover \{\\n"\cf0\par
+118 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+119 \cf3 "\}\\n"\cf0\par
+120 \cf3 "\\n"\cf0\par
+121 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+122 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+123 \cf3 "\}"\cf0 )\par
+124         self.pushButtonComeBack.setObjectName(\cf3 "pushButtonComeBack"\cf0 )\par
+125         self.lineEditTransferAccountNumber = QtWidgets.QLineEdit(self.frame_2)\par
+126         self.lineEditTransferAccountNumber.setGeometry(QtCore.QRect(270, 120, 260, 42))\par
+127         font = QtGui.QFont()\par
+128         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+129         font.setPointSize(16)\par
+130         font.setBold(\cf1 True\cf0 )\par
+131         font.setWeight(75)\par
+132         self.lineEditTransferAccountNumber.setFont(font)\par
+133         self.lineEditTransferAccountNumber.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+134         self.lineEditTransferAccountNumber.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+135 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+136 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+137 \cf3 "    border: 0;\\n"\cf0\par
+138 \cf3 "    border-radius: 5px;\\n"\cf0\par
+139 \cf3 "\}\\n"\cf0\par
+140 \cf3 "\\n"\cf0\par
+141 \cf3 ""\cf0 )\par
+142         self.lineEditTransferAccountNumber.setMaxLength(10)\par
+143         self.lineEditTransferAccountNumber.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+144         self.lineEditTransferAccountNumber.setDragEnabled(\cf1 False\cf0 )\par
+145         self.lineEditTransferAccountNumber.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+146         self.lineEditTransferAccountNumber.setClearButtonEnabled(\cf1 False\cf0 )\par
+147         self.lineEditTransferAccountNumber.setObjectName(\cf3 "lineEditTransferAccountNumber"\cf0 )\par
+148         MainWindow.setCentralWidget(self.centralwidget)\par
+149         self.statusbar = QtWidgets.QStatusBar(MainWindow)\par
+150         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+151         MainWindow.setStatusBar(self.statusbar)\par
+152 \par
+153         self.retranslateUi(MainWindow)\par
+154         QtCore.QMetaObject.connectSlotsByName(MainWindow)\par
+155         MainWindow.setTabOrder(self.lineEditTransferAccountNumber, self.lineEditTransferValue)\par
+156         MainWindow.setTabOrder(self.lineEditTransferValue, self.pushButtonTransferTransfer)\par
+157         MainWindow.setTabOrder(self.pushButtonTransferTransfer, self.pushButtonComeBack)\par
+158 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenTransfer.ScreenTransfer.centralwidget\par
+screenTransfer.ScreenTransfer.frame\par
+screenTransfer.ScreenTransfer.frame_2\par
+screenTransfer.ScreenTransfer.label_2\par
+screenTransfer.ScreenTransfer.lineEditTransferAccountNumber\par
+screenTransfer.ScreenTransfer.lineEditTransferValue\par
+screenTransfer.ScreenTransfer.pushButtonComeBack\par
+screenTransfer.ScreenTransfer.pushButtonTransferTransfer\par
+screenTransfer.ScreenTransfer.statusbar\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenTransfer.py\b0\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\par
+
+\pard\b0\f1\fs24\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia da Classe screenWithdraw.ScreenWithdraw\par
+
+\pard\kerning0\b0\f1\fs24 Diagrama de hierarquia para screenWithdraw.ScreenWithdraw:\par
+
+\pard\qc IMAGE\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Membros P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 def \b setupUi\b0  (self, \b mainWindow\b0 )\par
+{\pntext\f1 1)\tab}def \b retranslateUi\b0  (self, \b mainWindow\b0 )\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Atributos P\'fablicos\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 centralwidget\b0\par
+{\pntext\f1 1)\tab}\b frame\b0\par
+{\pntext\f1 2)\tab}\b label_2\b0\par
+{\pntext\f1 3)\tab}\b frame_2\b0\par
+{\pntext\f1 4)\tab}\b pushButtonWithdrawWithdraw\b0\par
+{\pntext\f1 5)\tab}\b lineEditWithdrawValue\b0\par
+{\pntext\f1 6)\tab}\b pushButtonComeBack\b0\par
+{\pntext\f1 7)\tab}\b statusbar\b0\par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\fs24\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0 Fun\'e7\'f5es membros\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 def screenWithdraw.ScreenWithdraw.retranslateUi (  \i self\i0 ,   \i mainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 133     \cf1 def \cf0 retranslateUi(self, mainWindow):\par
+134         _translate = QtCore.QCoreApplication.translate\par
+135         mainWindow.setWindowTitle(_translate(\cf3 "mainWindow"\cf0 , \cf3 "Saque"\cf0 ))\par
+136         self.label_2.setText(_translate(\cf3 "mainWindow"\cf0 , \cf3 "Evollutte Bank"\cf0 ))\par
+137         self.pushButtonWithdrawWithdraw.setText(_translate(\cf3 "mainWindow"\cf0 , \cf3 "Sacar"\cf0 ))\par
+138         self.lineEditWithdrawValue.setPlaceholderText(_translate(\cf3 "mainWindow"\cf0 , \cf3 "Valor"\cf0 ))\par
+139         self.pushButtonComeBack.setText(_translate(\cf3 "mainWindow"\cf0 , \cf3 "Voltar"\cf0 ))\par
+140 \par
+141 \par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\b\f0\fs20 def screenWithdraw.ScreenWithdraw.setupUi (  \i self\i0 ,   \i mainWindow\i0 )\par
+
+\pard\cbpat5\shading1000\widctlpar\li360\b0\f2\fs16 15     \cf1 def \cf0 setupUi(self, mainWindow):\par
+16         mainWindow.setObjectName(\cf3 "mainWindow"\cf0 )\par
+17         mainWindow.resize(800, 600)\par
+18         icon = QtGui.QIcon()\par
+19         icon.addPixmap(QtGui.QPixmap(\cf3 "banco.png"\cf0 ), QtGui.QIcon.Normal, QtGui.QIcon.Off)\par
+20         mainWindow.setWindowIcon(icon)\par
+21         self.centralwidget = QtWidgets.QWidget(mainWindow)\par
+22         self.centralwidget.setObjectName(\cf3 "centralwidget"\cf0 )\par
+23         self.frame = QtWidgets.QFrame(self.centralwidget)\par
+24         self.frame.setGeometry(QtCore.QRect(0, 0, 800, 80))\par
+25         self.frame.setStyleSheet(\cf3 "background-color: rgb(0, 55, 104);"\cf0 )\par
+26         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+27         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)\par
+28         self.frame.setObjectName(\cf3 "frame"\cf0 )\par
+29         self.label_2 = QtWidgets.QLabel(self.frame)\par
+30         self.label_2.setGeometry(QtCore.QRect(239, 10, 322, 60))\par
+31         font = QtGui.QFont()\par
+32         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+33         font.setPointSize(28)\par
+34         font.setBold(\cf1 True\cf0 )\par
+35         font.setWeight(75)\par
+36         self.label_2.setFont(font)\par
+37         self.label_2.setStyleSheet(\cf3 "color: rgb(255, 255, 255);"\cf0 )\par
+38         self.label_2.setObjectName(\cf3 "label_2"\cf0 )\par
+39         self.frame_2 = QtWidgets.QFrame(self.centralwidget)\par
+40         self.frame_2.setGeometry(QtCore.QRect(0, 80, 800, 600))\par
+41         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)\par
+42         sizePolicy.setHorizontalStretch(0)\par
+43         sizePolicy.setVerticalStretch(0)\par
+44         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())\par
+45         self.frame_2.setSizePolicy(sizePolicy)\par
+46         self.frame_2.setMinimumSize(QtCore.QSize(800, 600))\par
+47         self.frame_2.setMaximumSize(QtCore.QSize(800, 600))\par
+48         self.frame_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)\par
+49         self.frame_2.setStyleSheet(\cf3 "background-color: rgb(211, 243, 255);"\cf0 )\par
+50         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)\par
+51         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)\par
+52         self.frame_2.setObjectName(\cf3 "frame_2"\cf0 )\par
+53         self.pushButtonWithdrawWithdraw = QtWidgets.QPushButton(self.frame_2)\par
+54         self.pushButtonWithdrawWithdraw.setGeometry(QtCore.QRect(350, 200, 100, 36))\par
+55         font = QtGui.QFont()\par
+56         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+57         font.setPointSize(14)\par
+58         font.setBold(\cf1 True\cf0 )\par
+59         font.setWeight(75)\par
+60         self.pushButtonWithdrawWithdraw.setFont(font)\par
+61         self.pushButtonWithdrawWithdraw.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+62         self.pushButtonWithdrawWithdraw.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+63 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+64 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+65 \cf3 "    border: 0;\\n"\cf0\par
+66 \cf3 "    border-radius: 5px;\\n"\cf0\par
+67 \cf3 "\}\\n"\cf0\par
+68 \cf3 "\\n"\cf0\par
+69 \cf3 "QPushButton:hover \{\\n"\cf0\par
+70 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+71 \cf3 "\}\\n"\cf0\par
+72 \cf3 "\\n"\cf0\par
+73 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+74 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+75 \cf3 "\}"\cf0 )\par
+76         self.pushButtonWithdrawWithdraw.setObjectName(\cf3 "pushButtonWithdrawWithdraw"\cf0 )\par
+77         self.lineEditWithdrawValue = QtWidgets.QLineEdit(self.frame_2)\par
+78         self.lineEditWithdrawValue.setGeometry(QtCore.QRect(270, 120, 260, 42))\par
+79         font = QtGui.QFont()\par
+80         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+81         font.setPointSize(16)\par
+82         font.setBold(\cf1 True\cf0 )\par
+83         font.setWeight(75)\par
+84         self.lineEditWithdrawValue.setFont(font)\par
+85         self.lineEditWithdrawValue.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+86         self.lineEditWithdrawValue.setStyleSheet(\cf3 "QLineEdit \{\\n"\cf0\par
+87 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+88 \cf3 "    background-color: rgb(0, 55, 104);\\n"\cf0\par
+89 \cf3 "    border: 0;\\n"\cf0\par
+90 \cf3 "    border-radius: 5px;\\n"\cf0\par
+91 \cf3 "\}\\n"\cf0\par
+92 \cf3 "\\n"\cf0\par
+93 \cf3 ""\cf0 )\par
+94         self.lineEditWithdrawValue.setMaxLength(10)\par
+95         self.lineEditWithdrawValue.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)\par
+96         self.lineEditWithdrawValue.setDragEnabled(\cf1 False\cf0 )\par
+97         self.lineEditWithdrawValue.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)\par
+98         self.lineEditWithdrawValue.setClearButtonEnabled(\cf1 False\cf0 )\par
+99         self.lineEditWithdrawValue.setObjectName(\cf3 "lineEditWithdrawValue"\cf0 )\par
+100         self.pushButtonComeBack = QtWidgets.QPushButton(self.frame_2)\par
+101         self.pushButtonComeBack.setGeometry(QtCore.QRect(345, 410, 110, 30))\par
+102         font = QtGui.QFont()\par
+103         font.setFamily(\cf3 "Fira Code"\cf0 )\par
+104         font.setPointSize(10)\par
+105         font.setBold(\cf1 True\cf0 )\par
+106         font.setWeight(75)\par
+107         self.pushButtonComeBack.setFont(font)\par
+108         self.pushButtonComeBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))\par
+109         self.pushButtonComeBack.setStyleSheet(\cf3 "QPushButton \{\\n"\cf0\par
+110 \cf3 "    color: rgb(0, 55, 104);\\n"\cf0\par
+111 \cf3 "    border: 0;\\n"\cf0\par
+112 \cf3 "    border-radius: 5px;\\n"\cf0\par
+113 \cf3 "\}\\n"\cf0\par
+114 \cf3 "\\n"\cf0\par
+115 \cf3 "QPushButton:hover \{\\n"\cf0\par
+116 \cf3 "    color:rgb(134, 127, 255);\\n"\cf0\par
+117 \cf3 "\}\\n"\cf0\par
+118 \cf3 "\\n"\cf0\par
+119 \cf3 "QPushButton:pressed \{\\n"\cf0\par
+120 \cf3 "    color: rgb(255, 255, 255);\\n"\cf0\par
+121 \cf3 "\}"\cf0 )\par
+122         self.pushButtonComeBack.setObjectName(\cf3 "pushButtonComeBack"\cf0 )\par
+123         mainWindow.setCentralWidget(self.centralwidget)\par
+124         self.statusbar = QtWidgets.QStatusBar(mainWindow)\par
+125         self.statusbar.setObjectName(\cf3 "statusbar"\cf0 )\par
+126         mainWindow.setStatusBar(self.statusbar)\par
+127 \par
+128         self.retranslateUi(mainWindow)\par
+129         QtCore.QMetaObject.connectSlotsByName(mainWindow)\par
+130         mainWindow.setTabOrder(self.lineEditWithdrawValue, self.pushButtonWithdrawWithdraw)\par
+131         mainWindow.setTabOrder(self.pushButtonWithdrawWithdraw, self.pushButtonComeBack)\par
+132 \par
+
+\pard\brdrb\brdrs\brdrw5\brsp20 \widctlpar\b\f0\fs20\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\fs24 Atributos\par
+
+\pard\keepn\widctlpar\s4\sb240\sa60\fs20 screenWithdraw.ScreenWithdraw.centralwidget\par
+screenWithdraw.ScreenWithdraw.frame\par
+screenWithdraw.ScreenWithdraw.frame_2\par
+screenWithdraw.ScreenWithdraw.label_2\par
+screenWithdraw.ScreenWithdraw.lineEditWithdrawValue\par
+screenWithdraw.ScreenWithdraw.pushButtonComeBack\par
+screenWithdraw.ScreenWithdraw.pushButtonWithdrawWithdraw\par
+screenWithdraw.ScreenWithdraw.statusbar\par
+A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li720\b0\f1 E:/2020.2 quarentena/github/Projeto_PooII/cliente/\b screenWithdraw.py\b0\par
+
+\pard\fs24\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\b\f0\fs36 Arquivos\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/clientHost.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b clientHost.ClientHost\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b clientHost\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 string \b clientHost.host\b0  = 'localhost'\par
+{\pntext\f1 1)\tab}int \b clientHost.port\b0  = 8000\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenBalance.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenBalance.ScreenBalance\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenBalance\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenBalance.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenBalance.MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenBalance.ui\b0  = ScreenBalance()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenDeposit.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenDeposit.ScreenDeposit\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenDeposit\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenDeposit.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenDeposit.MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenDeposit.ui\b0  = ScreenDeposit()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenExtract.py\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\kerning0\b0\f1\fs20 class \b screenExtract.ScreenExtract\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenExtract\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenExtract.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenExtract.MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenExtract.ui\b0  = ScreenExtract()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenInitial.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenInitial.ScreenInitial\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenInitial\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenInitial.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenInitial.MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenInitial.ui\b0  = ScreenInitial()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenMain.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\b0\f1\fs24 F\b\f0 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenMain.Main\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenMain\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenMain.app\b0  = QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenMain.show_main\b0  = Main()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenMenu.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenMenu.ScreenMenu\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenMenu\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenMenu.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenMenu.MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenMenu.ui\b0  = ScreenMenu()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenRegister.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenRegister.ScreenRegister\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenRegister\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenRegister.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenRegister.MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenRegister.ui\b0  = ScreenRegister()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenTelas.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenTelas.ScreenTelas\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenTelas\b0\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenTransfer.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenTransfer.ScreenTransfer\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenTransfer\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenTransfer.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenTransfer.MainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenTransfer.ui\b0  = ScreenTransfer()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/screenWithdraw.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 Componentes\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20 class \b screenWithdraw.ScreenWithdraw\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b screenWithdraw\b0\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\b\f0\fs24 Vari\'e1veis\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\f1\fs20 screenWithdraw.app\b0  = QtWidgets.QApplication(sys.argv)\par
+{\pntext\f1 1)\tab}\b screenWithdraw.mainWindow\b0  = QtWidgets.QMainWindow()\par
+{\pntext\f1 2)\tab}\b screenWithdraw.ui\b0  = ScreenWithdraw()\par
+
+\pard\fs24\par
+\par
+
+\pard\keepn\widctlpar\s2\sb240\sa60\kerning28\b\f0\fs28 Refer\'eancia do Arquivo E:/2020.2 quarentena/github/Projeto_PooII/cliente/testpoo.py\par
+
+\pard\keepn\widctlpar\s3\sb240\sa60\kerning0\fs24 <em>Namespaces</em>\par
+
+\pard 
+{\pntext\f1 0)\tab}{\*\pn\pnlvlbody\pnf1\pnindent0\pnstart0\pndec{\pntxta)}}
+\widctlpar\fi-360\li360\b0\f1\fs20  \b testpoo\b0\par
+
+\pard\fs24\par
+
+\pard\keepn\s1\sb240\sa60\kerning36\b\f0\fs36 Sum\'e1rio\par
+
+\pard\sa200\sl276\slmult1\kerning0\b0\f1\fs24 INDEX\par
+}
+ 

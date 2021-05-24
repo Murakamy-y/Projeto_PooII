@@ -33,6 +33,10 @@ class conectServ():
 		self.connection = None
 
 	def connectionServ(self):
+		'''
+			DESCRIPTION:
+				função utilizada ligar o servidor e aguarda alguma conexão com o cliente para iniciarmos
+		'''
 		self.addr = (host, port)
 		self.servSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		self.servSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -44,6 +48,10 @@ class conectServ():
 		print('Conectado!')
 
 	def communication(self):
+		'''
+		DESCRIPTION:
+			função criada para enviar e receber dados entre o cliente e servidor
+		'''
 		dados = self.connection.recv(1024).decode()
 		message = dados.split('π∛')
 		if message[0] == 'add_client':
@@ -62,8 +70,7 @@ class conectServ():
 				print('CPF Em Uso!')
 				self.connection.send('False2'.encode())
 
-		# Logar
-		elif message[0] == 'authenticated':
+		elif message[0] == 'authenticated': # Logar
 			authenticated = self.bank.login(message[1], message[2])  # pelo numero da conta
 			if authenticated:
 				print('Login Realizado Sucesso')
@@ -72,18 +79,17 @@ class conectServ():
 				print('Login Não Realizado!')
 				self.connection.send('Conexão inválida!'.encode())
 
-		elif message[0] == 'menuName':
+		elif message[0] == 'menuName': # Mostrar o nome do usuario na tela de menu
 			account = self.bank.get_account_2()
 			name = '{}'.format(account.holder.name.capitalize() + ' ' + account.holder.surname.capitalize())
 			self.connection.send(name.encode())
 
-		elif message[0] == 'menuBalance':
+		elif message[0] == 'menuBalance': # Depositar
 			account = self.bank.get_account_2()
 			balance = '{}'.format(str(account.balance))
 			self.connection.send(balance.encode())
 
-		# withdraw
-		elif message[0] == 'withdraw':
+		elif message[0] == 'withdraw': # Sacar
 			account = self.bank.get_account_2()
 			if account.withdraw(float(message[1])):
 				print('Saque Realizado Com Sucesso!')
@@ -92,15 +98,13 @@ class conectServ():
 				print('Erro No Saque!')
 				self.connection.send('Erro no saque'.encode())
 
-		# depositar
-		elif message[0] == 'deposit':
+		elif message[0] == 'deposit': # Depositar
 			account = self.bank.get_account_2()
 			account.deposit(float(message[1]))
 			print('Deposito Realizado com Sucesso!')
 			self.connection.send('True'.encode())
 
-		# Transferir
-		elif message[0] == 'transfer':
+		elif message[0] == 'transfer': # Transferir
 			account_origin = self.bank.get_account_2()
 			account_destiny = self.bank.get_account(message[1])
 			if account_destiny:
@@ -111,14 +115,17 @@ class conectServ():
 				print('Número de Conta Não Encontrado!')
 				self.connection.send('False'.encode())
 
-		# Extrato
-		elif message[0] == 'extract':
+		elif message[0] == 'extract': # Extrato
 			account = self.bank.get_account_2()
 			extracts = account.extract.display_extract()
 			print('Tirou Extrato!')
 			self.connection.send(extracts.encode())
 			
 	def servClose(self):
+		'''
+		DESCRIPTION:
+			Utilizado para fechar o servidor
+		'''
 		self.servSocket.close()
 		print("Server finalizado.")
 

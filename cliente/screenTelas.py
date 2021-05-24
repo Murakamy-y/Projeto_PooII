@@ -19,6 +19,10 @@ from screenWithdraw import ScreenWithdraw
 
 class ScreenTelas(QtWidgets.QWidget):
 	def setupUI(self, Main):
+		'''
+		DESCRIPTION:
+			criada para chamar todas as telas. e configurar o layout
+		'''
 		Main.setObjectName('Main')
 		Main.resize(800, 600)
 
