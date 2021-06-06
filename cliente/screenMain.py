@@ -191,6 +191,8 @@ class Main(ScreenTelas):
 			self.screenTransfer.lineEditTransferAccountNumber.setText('')
 
 	def comeBackLogin(self): # Botao para voltar a tela de login
+		push = '{}'.format('backLogin')
+		pull = self.clientHost.submit(push)
 		self.screenInitial.lineEditLoginCPF.setText('')
 		self.screenInitial.lineEditLoginPassword.setText('')
 		self.QtStack.setCurrentIndex(0)
