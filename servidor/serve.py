@@ -25,7 +25,7 @@ host = 'localhost'
 port = 8000
 
 
-class conectServ():
+class conectServ:
 	def __init__(self):
 		self.bank = Bank()
 		self.addr = None
