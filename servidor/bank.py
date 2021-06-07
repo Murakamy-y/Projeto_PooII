@@ -22,8 +22,8 @@ Metodos criados
 		verifica se a senha e o cpf está vinculada ao banco
 '''
 
-from Projeto_PooII.servidor.client import Client
-from Projeto_PooII.servidor.account import Account
+from client import Client
+from account import Account
 import os
 import sqlite3
 import datetime

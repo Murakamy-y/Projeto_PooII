@@ -14,13 +14,12 @@ Metodos criados
 
 '''
 import socket
-import pickle
 
 from account import Account
 from client import Client
 from extract import Extract
 from bank import Bank
-import sqlite3
+
 
 host = 'localhost'
 port = 8000
