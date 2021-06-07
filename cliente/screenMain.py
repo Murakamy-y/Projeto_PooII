@@ -90,8 +90,12 @@ class Main(ScreenTelas):
 	
 	def exitApp(self):	#	saida da aplicação	
 		# client_socket.close()
-		QMessageBox.information(None, 'Evollutte Bank', 'Programa Finalizado')
-		sys.exit(app.exec_())
+		push = '{}'.format('backLogin')
+		pull = self.clientHost.submit(push)
+		if pull == 'True':
+			print('Banco de Dados Finalizado')
+			QMessageBox.information(None, 'Evollutte Bank', 'Programa Finalizado')
+			sys.exit(app.exec_())
 
 	def buttonRegister(self): # Tela de Registro
 		name = self.screenRegister.lineEditRegisterName.text()
@@ -144,9 +148,9 @@ class Main(ScreenTelas):
 		self.QtStack.setCurrentIndex(5)
 
 	def menuExtract(self): #	onde é mostrado o extrato do cliente
-		push = '{}'.format('extract')
-		pull = self.clientHost.submit(push)
-		self.screenExtract.plainTextEdit.setPlainText(pull)
+		# push = '{}'.format('extract')
+		# pull = self.clientHost.submit(push)
+		self.screenExtract.plainTextEdit.setPlainText('')
 		self.QtStack.setCurrentIndex(6)
 
 	def withdraw(self): # Tela Saque
@@ -191,8 +195,8 @@ class Main(ScreenTelas):
 			self.screenTransfer.lineEditTransferAccountNumber.setText('')
 
 	def comeBackLogin(self): # Botao para voltar a tela de login
-		push = '{}'.format('backLogin')
-		pull = self.clientHost.submit(push)
+		#push = '{}'.format('backLogin')
+		#pull = self.clientHost.submit(push)
 		self.screenInitial.lineEditLoginCPF.setText('')
 		self.screenInitial.lineEditLoginPassword.setText('')
 		self.QtStack.setCurrentIndex(0)

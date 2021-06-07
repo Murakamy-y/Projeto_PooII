@@ -59,6 +59,7 @@ class Account:
 			informa uma mensagem, avisando que a saque foi um sucesso.
 			informa o restante do saldo presente na sua carteira após o termino da operação.
 		'''
+
 		if value < 0:
 			return 'Valor sacado não pode ser negativo!'
 		elif value > self._balance + self._limit:
@@ -80,6 +81,7 @@ class Account:
 			informa uma mensagem, avisando que o deposito foi um sucesso.
 			informa o restante do saldo presente na sua carteira após o termino da operação.
 		'''
+
 		if value < 0:
 			return 'Valor depositado não pode ser negativo!'
 		else:
@@ -101,6 +103,7 @@ class Account:
 		:return:
 			informa uma mensagem, avisando que a transferencia foi um sucesso.
 		'''
+		
 		if value < 0:
 			return 'Valor a ser transferido não pode ser negativo!'
 		elif value > self._balance + self._limit:
