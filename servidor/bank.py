@@ -24,6 +24,7 @@ Metodos criados
 
 from client import Client
 from account import Account
+from extract import Extract
 import psycopg2 as db
 import datetime
 from hashlib import md5
@@ -34,7 +35,7 @@ class Config:
 		self.config = {
 			'postgres': {
 				'user': 'postgres',
-				'password': 'root',
+				'password': '1397',
 				'host': '127.0.0.1',
 				'port': '5432',
 				'database': 'Evollutte_bank'
@@ -91,8 +92,7 @@ class Bank(Connection):
 	def __init__(self):
 		self.logCPF = None
 		self.logNumber = None
-		self.extract = []
-		self.add = []
+		self.extract = Extract()
 		Connection.__init__(self)
 		sql = 'create table if not exists db_client (CPF integer primary key, Name varchar(45) not null, Surname varchar(45) not null)'
 		self.execute(sql)
@@ -111,8 +111,8 @@ class Bank(Connection):
 			self.add_clients(sql, client)
 		except Exception as error:
 			print('Erro ao Inserir', error)
-		else:
-			self.commit()
+		# else:
+			# self.commit()
 
 	def get_client(self, cpf):
 		'''
@@ -145,19 +145,23 @@ class Bank(Connection):
 		DESCRIPTION:
 			verifica se a senha e o cpf está vinculada ao banco
 		'''
-		sql = f'select Password from db_account where CPF = {cpf}'
-		self.execute(sql)
-		bd_password = self.fetchall()
-		if md5(password.encode('utf-8')).hexdigest() == str(bd_password[0][0]):
-			self.logCPF = int(cpf)
-			sql = f'select Number from db_account where CPF = {cpf}'
+
+		if self.get_client(cpf) is True:
+			sql = f'select Password from db_account where CPF = {cpf}'
 			self.execute(sql)
-			bd_number = self.fetchall()
-			self.logNumber = bd_number[0][0]
-			return True
+			bd_password = self.fetchall()
+			password = md5(password.encode('utf-8')).hexdigest()
+			if password == bd_password[0][0]:
+				self.logCPF = int(cpf)
+				sql = f'select Number from db_account where CPF = {cpf}'
+				self.execute(sql)
+				bd_number = self.fetchall()
+				self.logNumber = bd_number[0][0]
+				return True
+			else:
+				return False
 		else:
 			return False
-
 
 	def get_account(self, number):
 		'''
@@ -200,66 +204,67 @@ class Bank(Connection):
 		limits_account = self.fetchall()
 		limits_account = limits_account[0][0]
 		if float(value) < 0:
-			return 'Valor sacado não pode ser negativo!'
+			return 'Negativo'
 		elif float(value) > balance + limits_account:
-			return 'Valor indisponível para saque!'
+			return 'Indisponível'
 		else:
 			date = datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')
 			balance -= float(value)
-			self.extract.append(' - Sacou {} em {}\n'.format(value, date))
+			self.extract.add_extract('{} - Sacou {} em {}\n'.format(self.logCPF, value, date))
 			sql = f'UPDATE db_account set Balance = {balance} WHERE CPF = {self.logCPF}'
 			self.execute(sql)
 			self.commit()
-			return f'Saque realizado com sucesso!\nSaldo restante = {balance}'
+			return 'True'
 
 	def deposit(self, value):
 		sql = f'select Balance from db_account where CPF = {self.logCPF}'
 		self.execute(sql)
 		balance = self.fetchall()
 		balance = balance[0][0]
-
-		sql = f'select Limits from db_account where CPF = {self.logCPF}'
-		self.execute(sql)
-		limits_account = self.fetchall()
-		limits_account = limits_account[0][0]
 		if float(value) < 0:
-			return 'Valor sacado não pode ser negativo!'
+			return 'Negativo'
 		else:
 			date = datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')
 			balance += float(value)
-			self.extract.append(' - Depositou {} em {}\n'.format(value, date))
+			self.extract.add_extract(' - Depositou {} em {}\n'.format(value, date))
 			sql = f'update db_account set Balance = {balance} where CPF = {self.logCPF}'
 			self.execute(sql)
 			self.commit()
-			return f'Saque realizado com sucesso!\nSaldo restante = {balance}'
+			return 'True'
 	
 	def transfer(self, number, value):
 		account = self.get_account(int(number))
-		if account == True:
+		if account:
 			sql = f'select Balance FROM db_account where CPF = {self.logCPF}'
 			self.execute(sql)
 			balance_origin = self.fetchall()
 			balance_origin = balance_origin[0][0]
-			if float(value) < balance_origin or float(value) > 0:
-				balance_origin -= float(value)
-				sql = f'update db_account set Balance = {balance_origin} where CPF = {self.logCPF}'
-				self.execute(sql)
-				self.commit()
-				
-				sql = f'select Balance from db_account where Number = {int(number)}'
-				self.execute(sql)
-				balance_destiny = self.fetchall()
-				balance_destiny = balance_destiny[0][0]
-				balance_destiny += float(value)
-				sql = f'UPDATE db_account set Balance = {balance_destiny} where Number = {int(number)}'
-				self.execute(sql)
-				self.commit()
-				return 'Transferência realizada com sucesso!'
+			if float(value) < 0:
+				return 'Negativo'
 			else:
-				return 'Dinheiro insuficiente!'
+				if float(value) < balance_origin:
+					balance_origin -= float(value)
+					sql = f'update db_account set Balance = {balance_origin} where CPF = {self.logCPF}'
+					self.execute(sql)
+					self.commit()
+
+					sql = f'select Balance from db_account where Number = {int(number)}'
+					self.execute(sql)
+					balance_destiny = self.fetchall()
+					balance_destiny = balance_destiny[0][0]
+					balance_destiny += float(value)
+					sql = f'UPDATE db_account set Balance = {balance_destiny} where Number = {int(number)}'
+					self.execute(sql)
+					self.commit()
+					return 'True'
+				else:
+					return 'Inválido'
 		else:
-			return 'Conta não encontrada!'
-	
+			return 'False'
+
+	def extract(self):
+		self.extract.display_extract(self.logCPF)
+
 	def sairApp(self):
 		self.commit()
 		# cnx.close()

@@ -82,7 +82,7 @@ class conectServ:
 				self.connection.send('True'.encode())
 			else:
 				print('Login Não Realizado!')
-				self.connection.send('Conexão inválida!'.encode())
+				self.connection.send('False'.encode())
 
 		elif message[0] == 'menuName':  # Mostrar o nome do usuario na tela de menu
 			self.connection.send(str(self.bank.nameAndSurname()).encode())
@@ -91,18 +91,34 @@ class conectServ:
 			self.connection.send(str(self.bank.menuBalance()).encode())
 
 		elif message[0] == 'withdraw':  # Sacar
-			self.bank.withdraw(message[1])
-			self.connection.send('True'.encode())
+			account = self.bank.withdraw(message[1])
+			if account == 'True':
+				self.connection.send('True'.encode())
+			elif account == 'Negativo':
+				self.connection.send('Negativo'.encode())
+			elif account == 'Indisponível':
+				self.connection.send('Indisponível'.encode())
 
-		elif message[0] == 'deposit': # Depositar
-			self.bank.deposit(message[1])
-			self.connection.send('True'.encode())
+		elif message[0] == 'deposit':  # Depositar
+			account = self.bank.deposit(message[1])
+			if account == 'True':
+				self.connection.send('True'.encode())
+			elif account == 'Negativo':
+				self.connection.send('Negativo'.encode())
 
 		elif message[0] == 'transfer': # Transferir
-			self.bank.transfer(message[1], message[2])
-			self.connection.send('True'.encode())
+			account = self.bank.transfer(message[1], message[2])
+			if account == 'True':
+				self.connection.send('True'.encode())
+			elif account == 'False':
+				self.connection.send('False'.encode())
+			elif account == 'Negativo':
+				self.connection.send('Negativo'.encode())
+			elif account == 'Inválido':
+				self.connection.send('Inválido'.encode())
+
 			
-		elif message[0] == 'extract': # Extrato
+		elif message[0] == 'extract':  # Extrato
 			# account = self.bank.get_account_2()
 			# extracts = account.extract.display_extract()
 			# print('Tirou Extrato!')

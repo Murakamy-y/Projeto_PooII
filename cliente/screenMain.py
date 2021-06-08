@@ -21,8 +21,8 @@ class Main(ScreenTelas):
 		DESCRIPTION:
 			utilizado a fim de receber e enviar dados para o servidor e conectar os botão as tela			
 		'''
-		self.cpf = ''
-		self.number = ''
+		self.cpf = None
+		self.number = None
 		self.setupUI(self)
 		self.clientHost = ClientHost()
 		self.clientHost.connectClient()
@@ -74,6 +74,9 @@ class Main(ScreenTelas):
 				self.screenMenu.lineEditMenuName.setText('nome')
 				self.menu()
 				self.QtStack.setCurrentIndex(2)
+
+			elif pull == 'False':
+				QMessageBox.information(None, 'Evollutte Bank', 'Conexão inválida!')
 		else:
 			QMessageBox.information(None, 'Evollutte Bank', 'Todos os valores devem ser preenchidos!')
 
@@ -88,7 +91,7 @@ class Main(ScreenTelas):
 		self.QtStack.setCurrentIndex(1)
 
 	
-	def exitApp(self):	#	saida da aplicação	
+	def exitApp(self):  # saida da aplicação
 		# client_socket.close()
 		push = '{}'.format('backLogin')
 		pull = self.clientHost.submit(push)
@@ -155,16 +158,20 @@ class Main(ScreenTelas):
 
 	def withdraw(self): # Tela Saque
 		value = self.screenWithdraw.lineEditWithdrawValue.text()
-		if not(value == ''):
+		if not (value == ''):
 			push = '{}π∛{}'.format('withdraw', value)
 			pull = self.clientHost.submit(push)
 			if pull == 'True':
 				self.screenWithdraw.lineEditWithdrawValue.setText('')
-				QMessageBox.information(None, 'Evollutte Bank', value)
+				QMessageBox.information(None, 'Evollutte Bank', 'Saque realizado com sucesso!')
 				self.menu()
 				self.QtStack.setCurrentIndex(2)
-			else:
-				QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
+			elif pull == 'Negativo':
+				self.screenWithdraw.lineEditWithdrawValue.setText('')
+				QMessageBox.information(None, 'Evollutte Bank', 'Valor sacado não pode ser negativo!')
+			elif pull == 'Indisponível':
+				self.screenWithdraw.lineEditWithdrawValue.setText('')
+				QMessageBox.information(None, 'Evollutte Bank', 'Valor indisponível para saque!')
 
 	def deposit(self): # Tela Deposito
 		value = self.screenDeposit.lineEditDepositValue.text()
@@ -173,11 +180,14 @@ class Main(ScreenTelas):
 			pull = self.clientHost.submit(push)
 			if pull == 'True':
 				self.screenDeposit.lineEditDepositValue.setText('')
-				QMessageBox.information(None, 'Evollutte Bank', value)
+				QMessageBox.information(None, 'Evollutte Bank', 'Deposito realizado com sucesso!')
 				self.menu()
 				self.QtStack.setCurrentIndex(2)
+			elif pull == 'Negativo':
+				self.screenDeposit.lineEditDepositValue.setText('')
+				QMessageBox.information(None, 'Evollutte Bank', 'Valor depositado não pode ser negativo!')
 		else:
-			QMessageBox.information(None, 'Evollutte Bank', "Valor invalido")
+			QMessageBox.information(None, 'Evollutte Bank', 'Valor inválido')
 
 	def transfer(self): # Tela Tranferência
 		number = self.screenTransfer.lineEditTransferAccountNumber.text()
@@ -191,10 +201,20 @@ class Main(ScreenTelas):
 			self.menu()
 			self.QtStack.setCurrentIndex(2)
 		elif pull == 'False':
-			QMessageBox.information(None, 'Evollutte Bank', 'Número de Conta Não Encontrado')
+			QMessageBox.information(None, 'Evollutte Bank', 'Número de Conta Não Encontrado!')
 			self.screenTransfer.lineEditTransferAccountNumber.setText('')
+			self.screenTransfer.lineEditTransferValue.setText('')
+		elif pull == 'Negativo':
+			QMessageBox.information(None, 'Evollutte Bank', 'Valor a ser transferido não pode ser negativo!')
+			self.screenTransfer.lineEditTransferAccountNumber.setText('')
+			self.screenTransfer.lineEditTransferValue.setText('')
 
-	def comeBackLogin(self): # Botao para voltar a tela de login
+		elif pull == 'Inválido':
+			QMessageBox.information(None, 'Evollutte Bank', 'Valor indisponível para transferencia!')
+			self.screenTransfer.lineEditTransferAccountNumber.setText('')
+			self.screenTransfer.lineEditTransferValue.setText('')
+
+	def comeBackLogin(self):  # Botao para voltar a tela de login
 		#push = '{}'.format('backLogin')
 		#pull = self.clientHost.submit(push)
 		self.screenInitial.lineEditLoginCPF.setText('')

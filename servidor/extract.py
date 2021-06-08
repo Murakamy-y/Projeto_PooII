@@ -4,6 +4,7 @@ Class Extract: Essa classe é utilizada para o extrato da conta
 
 import datetime
 
+
 class Extract:
 	__slots__ = ['_open_date', '_extract']
 
@@ -20,9 +21,10 @@ class Extract:
 		DESCRIPTION:
 			adiciona uma transição na lista
 		'''
+
 		self._extract.append(str)
 
-	def display_extract(self):
+	def display_extract(self, cpf):
 		'''
 		DESCRIPTION:
 			Informa todas as operações realizadas na conta
