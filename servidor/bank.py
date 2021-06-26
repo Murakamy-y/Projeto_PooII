@@ -35,7 +35,7 @@ class Config:
 		self.config = {
 			'postgres': {
 				'user': 'postgres',
-				'password': '1397',
+				'password': 'root',
 				'host': '127.0.0.1',
 				'port': '5432',
 				'database': 'Evollutte_bank'
